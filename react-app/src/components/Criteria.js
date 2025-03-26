@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Table, Accordion, Badge, Form, Button, Row, Col, Alert } from 'react-bootstrap';
+import { Card, Table, Accordion, Badge, Form, Button, Row, Col, Alert, Modal } from 'react-bootstrap';
 import criteriaWithAllLevels from '../data/criteria_with_all_levels.json';
 
 const Criteria = () => {
@@ -7,6 +7,19 @@ const Criteria = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
+  
+  // State for Add New Skill form
+  const [showAddSkillForm, setShowAddSkillForm] = useState(false);
+  const [newSkill, setNewSkill] = useState({
+    category: '',
+    description: '',
+    medium_description: '',
+    average_description: '',
+    high_description: '',
+    subcategories: [],
+    level_descriptions: {}
+  });
+  const [validationErrors, setValidationErrors] = useState({});
   
   useEffect(() => {
     // Load criteria data with all proficiency levels
@@ -48,6 +61,86 @@ const Criteria = () => {
       sub.name && sub.name.toLowerCase().includes(searchTerm.toLowerCase())
     ))
   );
+  
+  // Function to handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewSkill(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear validation error when field is edited
+    if (validationErrors[name]) {
+      setValidationErrors(prev => ({
+        ...prev,
+        [name]: null
+      }));
+    }
+  };
+  
+  // Function to validate form
+  const validateForm = () => {
+    const errors = {};
+    
+    if (!newSkill.category.trim()) {
+      errors.category = 'Category name is required';
+    }
+    
+    if (!newSkill.description.trim()) {
+      errors.description = 'Low proficiency description is required';
+    }
+    
+    if (!newSkill.medium_description.trim()) {
+      errors.medium_description = 'Medium proficiency description is required';
+    }
+    
+    if (!newSkill.average_description.trim()) {
+      errors.average_description = 'Average proficiency description is required';
+    }
+    
+    if (!newSkill.high_description.trim()) {
+      errors.high_description = 'High proficiency description is required';
+    }
+    
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+  
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if (validateForm()) {
+      // Create a new skill object
+      const skillToAdd = {
+        ...newSkill,
+        subcategories: [] // Initialize with empty subcategories
+      };
+      
+      // Log the new skill as JSON to console
+      console.log('New Skill Added:');
+      console.log(JSON.stringify(skillToAdd, null, 2));
+      
+      // Add the new skill to the criteria list (in a real app, this would be saved to a database)
+      setCriteria(prev => [...prev, skillToAdd]);
+      
+      // Reset form and close modal
+      setNewSkill({
+        category: '',
+        description: '',
+        medium_description: '',
+        average_description: '',
+        high_description: '',
+        subcategories: [],
+        level_descriptions: {}
+      });
+      setShowAddSkillForm(false);
+      
+      // Show success message (in a real app)
+      alert('New skill added successfully! Check the console for JSON output.');
+    }
+  };
 
   return (
     <div className="criteria">
@@ -58,16 +151,27 @@ const Criteria = () => {
           <Card.Title>Master Criteria Reference</Card.Title>
           <p>This page shows the detailed criteria for evaluating skills across different categories with four proficiency levels: Low, Medium, Average, and High.</p>
           
-          <Form className="mt-3">
-            <Form.Group>
-              <Form.Control 
-                type="text" 
-                placeholder="Search for skills or categories..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </Form.Group>
-          </Form>
+          <Row className="mt-3">
+            <Col md={8}>
+              <Form.Group>
+                <Form.Control 
+                  type="text" 
+                  placeholder="Search for skills or categories..." 
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={4}>
+              <Button 
+                variant="success" 
+                className="w-100"
+                onClick={() => setShowAddSkillForm(true)}
+              >
+                Add New Skill
+              </Button>
+            </Col>
+          </Row>
         </Card.Body>
       </Card>
       
@@ -325,6 +429,125 @@ const Criteria = () => {
           </Accordion.Item>
         ))}
       </Accordion>
+      
+      {/* Add New Skill Modal Form */}
+      <Modal 
+        show={showAddSkillForm} 
+        onHide={() => setShowAddSkillForm(false)}
+        size="lg"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Add New Skill</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label>Skill Category Name <span className="text-danger">*</span></Form.Label>
+              <Form.Control 
+                type="text" 
+                name="category"
+                value={newSkill.category}
+                onChange={handleInputChange}
+                isInvalid={!!validationErrors.category}
+                placeholder="Enter skill category name"
+              />
+              <Form.Control.Feedback type="invalid">
+                {validationErrors.category}
+              </Form.Control.Feedback>
+            </Form.Group>
+            
+            <Row>
+              <Col md={6}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Low Proficiency Description <span className="text-danger">*</span></Form.Label>
+                  <Form.Control 
+                    as="textarea" 
+                    rows={3}
+                    name="description"
+                    value={newSkill.description}
+                    onChange={handleInputChange}
+                    isInvalid={!!validationErrors.description}
+                    placeholder="Describe low proficiency level"
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {validationErrors.description}
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Col>
+              <Col md={6}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Medium Proficiency Description <span className="text-danger">*</span></Form.Label>
+                  <Form.Control 
+                    as="textarea" 
+                    rows={3}
+                    name="medium_description"
+                    value={newSkill.medium_description}
+                    onChange={handleInputChange}
+                    isInvalid={!!validationErrors.medium_description}
+                    placeholder="Describe medium proficiency level"
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {validationErrors.medium_description}
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Col>
+            </Row>
+            
+            <Row>
+              <Col md={6}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Average Proficiency Description <span className="text-danger">*</span></Form.Label>
+                  <Form.Control 
+                    as="textarea" 
+                    rows={3}
+                    name="average_description"
+                    value={newSkill.average_description}
+                    onChange={handleInputChange}
+                    isInvalid={!!validationErrors.average_description}
+                    placeholder="Describe average proficiency level"
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {validationErrors.average_description}
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Col>
+              <Col md={6}>
+                <Form.Group className="mb-3">
+                  <Form.Label>High Proficiency Description <span className="text-danger">*</span></Form.Label>
+                  <Form.Control 
+                    as="textarea" 
+                    rows={3}
+                    name="high_description"
+                    value={newSkill.high_description}
+                    onChange={handleInputChange}
+                    isInvalid={!!validationErrors.high_description}
+                    placeholder="Describe high proficiency level"
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    {validationErrors.high_description}
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Col>
+            </Row>
+            
+            <Alert variant="info">
+              <small>
+                Note: Subcategories and level descriptions can be added after creating the main skill category.
+                The form will output the new skill data as JSON to the browser console.
+              </small>
+            </Alert>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowAddSkillForm(false)}>
+            Cancel
+          </Button>
+          <Button variant="primary" onClick={handleSubmit}>
+            Add Skill
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 };
