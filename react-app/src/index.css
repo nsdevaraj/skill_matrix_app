@@ -1,101 +1,149 @@
 /* Add custom styles for the skill matrix application */
 
+/* General styles */
 body {
-  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.app-container {
-  padding: 20px;
-}
-
-/* Skill level color indicators */
+/* Level color coding */
 .level-1 {
-  background-color: #ffcccc !important;
+  background-color: #ffebee;
 }
 
 .level-2 {
-  background-color: #ffe6cc !important;
+  background-color: #fff8e1;
 }
 
 .level-3 {
-  background-color: #ffffcc !important;
+  background-color: #e3f2fd;
 }
 
 .level-4 {
-  background-color: #ccffcc !important;
+  background-color: #e8f5e9;
 }
 
 .level-5 {
-  background-color: #99ff99 !important;
+  background-color: #e0f7fa;
 }
 
-/* Skill matrix table styles */
+/* Accordion styling */
+.accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+.subcategory-accordion .accordion-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.subcategory-accordion .accordion-body {
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+/* Card styling */
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.75rem 1.25rem;
+}
+
+.category-card {
+  margin-bottom: 1.5rem;
+}
+
+/* Table styling */
 .skill-matrix-table th {
-  background-color: #f0f0f0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background-color: #f8f9fa;
 }
 
-.skill-matrix-table td {
+.skill-matrix-table td, .skill-matrix-table th {
+  padding: 0.75rem;
   vertical-align: middle;
 }
 
-/* Fields keeper custom styles */
-.fields-keeper-container {
-  border: 1px solid #dee2e6;
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+}
+
+/* Dropdown styling */
+.dropdown-toggle.btn-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown-menu {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
-  padding: 15px;
-  margin-bottom: 20px;
 }
 
-.fields-keeper-box {
-  min-height: 100px;
-  border: 1px dashed #ced4da;
-  border-radius: 0.25rem;
-  padding: 10px;
-  margin-bottom: 10px;
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #0d6efd;
+  color: white;
 }
 
-.fields-keeper-item {
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  padding: 5px 10px;
-  margin: 5px;
-  display: inline-block;
-  cursor: grab;
-}
-
-.fields-keeper-item:active {
-  cursor: grabbing;
-}
-
-/* Category and subcategory styles */
-.category-card {
-  margin-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
+/* Custom view styling */
 .subcategory-item {
-  padding: 10px;
-  border-left: 4px solid #007bff;
-  margin-bottom: 5px;
+  background-color: #f8f9fa;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-/* Team overview styles */
-.employee-card {
-  transition: transform 0.2s;
+/* Modal styling */
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.employee-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .fields-keeper-container {
-    flex-direction: column;
+  .row {
+    margin-bottom: 1rem;
   }
+  
+  .col-md-4, .col-md-8 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation for accordion transitions */
+.accordion-body {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effects */
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Progress bar styling */
+.progress {
+  height: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.progress-bar {
+  font-weight: 500;
 }

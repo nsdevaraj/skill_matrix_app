@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Table, Accordion, Badge } from 'react-bootstrap';
+import { Card, Table, Accordion, Badge, Form, Button, Row, Col, Alert } from 'react-bootstrap';
 import criteriaData from '../data/criteria.json';
 
 const Criteria = () => {
   const [criteria, setCriteria] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [expandedCategories, setExpandedCategories] = useState({});
   
   useEffect(() => {
     // Load criteria data
     setCriteria(criteriaData);
+    
+    // Initialize expanded state for all categories
+    const initialExpandedState = {};
+    criteriaData.forEach((category, index) => {
+      initialExpandedState[index] = false;
+    });
+    setExpandedCategories(initialExpandedState);
   }, []);
 
   // Function to determine badge color based on level
@@ -21,6 +31,23 @@ const Criteria = () => {
       default: return 'secondary';
     }
   };
+  
+  // Function to toggle expanded state for a category
+  const toggleCategory = (index) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+  
+  // Function to filter criteria based on search term
+  const filteredCriteria = criteria.filter(category => 
+    category.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (category.description && category.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+    (category.subcategories && category.subcategories.some(sub => 
+      sub.name && sub.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ))
+  );
 
   return (
     <div className="criteria">
@@ -30,13 +57,156 @@ const Criteria = () => {
         <Card.Body>
           <Card.Title>Master Criteria Reference</Card.Title>
           <p>This page shows the detailed criteria for evaluating skills across different categories.</p>
+          
+          <Form className="mt-3">
+            <Form.Group>
+              <Form.Control 
+                type="text" 
+                placeholder="Search for skills or categories..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </Form.Group>
+          </Form>
         </Card.Body>
       </Card>
       
-      <Accordion defaultActiveKey="0">
-        {criteria.map((category, index) => (
+      <Row className="mb-4">
+        <Col md={4}>
+          <Card>
+            <Card.Header>Skill Categories</Card.Header>
+            <Card.Body style={{ maxHeight: '600px', overflowY: 'auto' }}>
+              <div className="list-group">
+                {filteredCriteria.map((category, index) => (
+                  <Button 
+                    key={index} 
+                    variant="outline-primary"
+                    className={`list-group-item list-group-item-action text-start mb-2 ${selectedCategory === index ? 'active' : ''}`}
+                    onClick={() => setSelectedCategory(index)}
+                  >
+                    <div className="d-flex justify-content-between align-items-center">
+                      <span>{category.category}</span>
+                      {category.subcategories && category.subcategories.length > 0 && (
+                        <Badge bg="info" pill>
+                          {category.subcategories.length}
+                        </Badge>
+                      )}
+                    </div>
+                  </Button>
+                ))}
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+        
+        <Col md={8}>
+          {selectedCategory !== null ? (
+            <div className="selected-category">
+              <Card className="mb-3">
+                <Card.Header className="bg-primary text-white">
+                  <h4>{filteredCriteria[selectedCategory].category}</h4>
+                </Card.Header>
+                <Card.Body>
+                  <Row>
+                    <Col md={6}>
+                      <h5>Low Proficiency</h5>
+                      <p>{filteredCriteria[selectedCategory].description || 'No description available'}</p>
+                    </Col>
+                    <Col md={6}>
+                      <h5>High Proficiency</h5>
+                      <p>{filteredCriteria[selectedCategory].high_description || 'No description available'}</p>
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card>
+              
+              <Card className="mb-3">
+                <Card.Header>Level Descriptions</Card.Header>
+                <Card.Body>
+                  <Table bordered hover responsive>
+                    <thead>
+                      <tr>
+                        <th style={{ width: '20%' }}>Level</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {filteredCriteria[selectedCategory].level_descriptions && 
+                       Object.entries(filteredCriteria[selectedCategory].level_descriptions).map(([level, description]) => (
+                        <tr key={level}>
+                          <td>
+                            <Badge bg={getLevelBadgeColor(parseInt(level))} className="p-2 w-100 d-block text-center">
+                              Level {level}
+                            </Badge>
+                          </td>
+                          <td>{description}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                </Card.Body>
+              </Card>
+              
+              {filteredCriteria[selectedCategory].subcategories && 
+               filteredCriteria[selectedCategory].subcategories.length > 0 && (
+                <Card>
+                  <Card.Header>Subcategories</Card.Header>
+                  <Card.Body>
+                    <Accordion>
+                      {filteredCriteria[selectedCategory].subcategories.map((subcategory, subIndex) => (
+                        <Accordion.Item eventKey={subIndex.toString()} key={subIndex}>
+                          <Accordion.Header>{subcategory.name}</Accordion.Header>
+                          <Accordion.Body>
+                            <div className="subcategory-details">
+                              {subcategory.description ? (
+                                <p>{subcategory.description}</p>
+                              ) : (
+                                <p>No detailed description available for this subcategory.</p>
+                              )}
+                              
+                              {subcategory.skills && subcategory.skills.length > 0 ? (
+                                <>
+                                  <h6 className="mt-3">Related Skills</h6>
+                                  <ul className="list-group">
+                                    {subcategory.skills.map((skill, skillIndex) => (
+                                      <li className="list-group-item" key={skillIndex}>
+                                        {skill}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </>
+                              ) : null}
+                            </div>
+                          </Accordion.Body>
+                        </Accordion.Item>
+                      ))}
+                    </Accordion>
+                  </Card.Body>
+                </Card>
+              )}
+            </div>
+          ) : (
+            <Alert variant="info">
+              Please select a skill category from the list to view its details.
+            </Alert>
+          )}
+        </Col>
+      </Row>
+      
+      <h3 className="mb-3 mt-4">All Categories</h3>
+      <Accordion className="mb-4">
+        {filteredCriteria.map((category, index) => (
           <Accordion.Item eventKey={index.toString()} key={index}>
-            <Accordion.Header>{category.category}</Accordion.Header>
+            <Accordion.Header>
+              <div className="d-flex justify-content-between align-items-center w-100 me-3">
+                <span>{category.category}</span>
+                {category.subcategories && category.subcategories.length > 0 && (
+                  <Badge bg="info" pill>
+                    {category.subcategories.length} subcategories
+                  </Badge>
+                )}
+              </div>
+            </Accordion.Header>
             <Accordion.Body>
               <Card className="mb-3">
                 <Card.Body>
@@ -78,13 +248,35 @@ const Criteria = () => {
               {category.subcategories && category.subcategories.length > 0 && (
                 <>
                   <h5 className="mt-4">Subcategories</h5>
-                  <ul className="list-group">
+                  <Accordion className="subcategory-accordion">
                     {category.subcategories.map((subcategory, subIndex) => (
-                      <li className="list-group-item" key={subIndex}>
-                        {subcategory.name}
-                      </li>
+                      <Accordion.Item eventKey={subIndex.toString()} key={subIndex}>
+                        <Accordion.Header>{subcategory.name}</Accordion.Header>
+                        <Accordion.Body>
+                          <div className="subcategory-details">
+                            {subcategory.description ? (
+                              <p>{subcategory.description}</p>
+                            ) : (
+                              <p>No detailed description available for this subcategory.</p>
+                            )}
+                            
+                            {subcategory.skills && subcategory.skills.length > 0 ? (
+                              <>
+                                <h6 className="mt-3">Related Skills</h6>
+                                <ul className="list-group">
+                                  {subcategory.skills.map((skill, skillIndex) => (
+                                    <li className="list-group-item" key={skillIndex}>
+                                      {skill}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </>
+                            ) : null}
+                          </div>
+                        </Accordion.Body>
+                      </Accordion.Item>
                     ))}
-                  </ul>
+                  </Accordion>
                 </>
               )}
             </Accordion.Body>

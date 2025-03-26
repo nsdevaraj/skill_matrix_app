@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Row, Col, Table, Form, Button, Nav, Tab, Alert, Modal, ProgressBar } from 'react-bootstrap';
+import { Card, Row, Col, Table, Form, Button, Nav, Tab, Alert, Modal, ProgressBar, Dropdown, Accordion, Badge } from 'react-bootstrap';
 import criteriaData from '../data/criteria.json';
 import teamOverviewData from '../data/team_overview.json';
 
@@ -11,6 +11,9 @@ const SkillUpgradeGuide = () => {
   const [showDetailModal, setShowDetailModal] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [skillLevels, setSkillLevels] = useState([1, 2, 3, 4, 5]);
+  const [selectedLevel, setSelectedLevel] = useState(null);
+  const [expandedCategories, setExpandedCategories] = useState({});
   
   // Fields for the custom drag and drop functionality
   const [availableFields, setAvailableFields] = useState([]);
@@ -61,6 +64,13 @@ const SkillUpgradeGuide = () => {
     }));
     
     setAvailableFields([...categoryFields, ...levelFields]);
+    
+    // Initialize expanded state for all categories
+    const initialExpandedState = {};
+    criteriaData.forEach((category, index) => {
+      initialExpandedState[index] = false;
+    });
+    setExpandedCategories(initialExpandedState);
   }, []);
 
   // Function to move a field from one list to another
@@ -131,10 +141,45 @@ const SkillUpgradeGuide = () => {
     setShowDetailModal(true);
   };
   
-  // Function to filter criteria based on search term
-  const filteredCriteria = criteria.filter(category => 
-    category.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Function to filter criteria based on search term and selected level
+  const filteredCriteria = criteria.filter(category => {
+    const matchesSearch = category.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (category.description && category.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      (category.subcategories && category.subcategories.some(sub => 
+        sub.name && sub.name.toLowerCase().includes(searchTerm.toLowerCase())
+      ));
+    
+    // If no level filter is applied, just check search term
+    if (selectedLevel === null) {
+      return matchesSearch;
+    }
+    
+    // Check if the category has the selected level in its level_descriptions
+    const hasSelectedLevel = category.level_descriptions && 
+      Object.keys(category.level_descriptions).includes(selectedLevel.toString());
+    
+    return matchesSearch && hasSelectedLevel;
+  });
+  
+  // Function to toggle expanded state for a category
+  const toggleCategory = (index) => {
+    setExpandedCategories(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+  
+  // Function to get level description
+  const getLevelDescription = (level) => {
+    switch(level) {
+      case 1: return 'Beginner';
+      case 2: return 'Basic';
+      case 3: return 'Intermediate';
+      case 4: return 'Advanced';
+      case 5: return 'Expert';
+      default: return '';
+    }
+  };
 
   return (
     <div className="skill-upgrade-guide">
@@ -145,16 +190,38 @@ const SkillUpgradeGuide = () => {
           <Card.Title>Skill Development Visualization</Card.Title>
           <p>This interactive guide helps visualize the skill progression path for different roles and skill categories.</p>
           
-          <Form className="mt-3">
-            <Form.Group>
-              <Form.Control 
-                type="text" 
-                placeholder="Search for skills..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </Form.Group>
-          </Form>
+          <Row className="mt-3">
+            <Col md={8}>
+              <Form.Group>
+                <Form.Control 
+                  type="text" 
+                  placeholder="Search for skills..." 
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </Form.Group>
+            </Col>
+            <Col md={4}>
+              <Dropdown>
+                <Dropdown.Toggle variant="outline-primary" id="level-filter-dropdown" className="w-100">
+                  {selectedLevel ? `Level ${selectedLevel} - ${getLevelDescription(selectedLevel)}` : 'Filter by Level'}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item onClick={() => setSelectedLevel(null)}>All Levels</Dropdown.Item>
+                  <Dropdown.Divider />
+                  {skillLevels.map(level => (
+                    <Dropdown.Item 
+                      key={level} 
+                      onClick={() => setSelectedLevel(level)}
+                      className={selectedLevel === level ? 'active' : ''}
+                    >
+                      Level {level} - {getLevelDescription(level)}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            </Col>
+          </Row>
         </Card.Body>
       </Card>
       
@@ -179,7 +246,36 @@ const SkillUpgradeGuide = () => {
             <Row className="mb-4">
               <Col md={4}>
                 <Card>
-                  <Card.Header>Skill Categories</Card.Header>
+                  <Card.Header className="d-flex justify-content-between align-items-center">
+                    <span>Skill Categories</span>
+                    <Dropdown>
+                      <Dropdown.Toggle variant="outline-secondary" size="sm" id="sort-dropdown">
+                        Sort
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => {
+                          const sorted = [...filteredCriteria].sort((a, b) => a.category.localeCompare(b.category));
+                          setCriteria(sorted);
+                        }}>
+                          Alphabetical (A-Z)
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => {
+                          const sorted = [...filteredCriteria].sort((a, b) => b.category.localeCompare(a.category));
+                          setCriteria(sorted);
+                        }}>
+                          Alphabetical (Z-A)
+                        </Dropdown.Item>
+                        <Dropdown.Item onClick={() => {
+                          const sorted = [...filteredCriteria].sort((a, b) => 
+                            (b.subcategories?.length || 0) - (a.subcategories?.length || 0)
+                          );
+                          setCriteria(sorted);
+                        }}>
+                          Most Subcategories
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </Card.Header>
                   <Card.Body style={{ maxHeight: '400px', overflowY: 'auto' }}>
                     <div className="list-group">
                       {filteredCriteria.map((category, index) => (
@@ -189,7 +285,14 @@ const SkillUpgradeGuide = () => {
                           className="list-group-item list-group-item-action text-start mb-2"
                           onClick={() => handleCategorySelect(category)}
                         >
-                          {category.category}
+                          <div className="d-flex justify-content-between align-items-center">
+                            <span>{category.category}</span>
+                            {category.subcategories && category.subcategories.length > 0 && (
+                              <Badge bg="info" pill>
+                                {category.subcategories.length}
+                              </Badge>
+                            )}
+                          </div>
                         </Button>
                       ))}
                     </div>
@@ -244,13 +347,35 @@ const SkillUpgradeGuide = () => {
                       {selectedCategory.subcategories && selectedCategory.subcategories.length > 0 && (
                         <div className="mt-3">
                           <h5>Related Skills</h5>
-                          <div className="d-flex flex-wrap">
-                            {selectedCategory.subcategories.map((subcategory, index) => (
-                              <div key={index} className="subcategory-item me-2 mb-2">
-                                {subcategory.name}
-                              </div>
+                          <Accordion className="subcategory-accordion">
+                            {selectedCategory.subcategories.map((subcategory, subIndex) => (
+                              <Accordion.Item eventKey={subIndex.toString()} key={subIndex}>
+                                <Accordion.Header>{subcategory.name}</Accordion.Header>
+                                <Accordion.Body>
+                                  <div className="subcategory-details">
+                                    {subcategory.description ? (
+                                      <p>{subcategory.description}</p>
+                                    ) : (
+                                      <p>No detailed description available for this subcategory.</p>
+                                    )}
+                                    
+                                    {subcategory.skills && subcategory.skills.length > 0 ? (
+                                      <>
+                                        <h6 className="mt-3">Related Skills</h6>
+                                        <ul className="list-group">
+                                          {subcategory.skills.map((skill, skillIndex) => (
+                                            <li className="list-group-item" key={skillIndex}>
+                                              {skill}
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      </>
+                                    ) : null}
+                                  </div>
+                                </Accordion.Body>
+                              </Accordion.Item>
                             ))}
-                          </div>
+                          </Accordion>
                         </div>
                       )}
                     </Card.Body>
@@ -274,11 +399,7 @@ const SkillUpgradeGuide = () => {
                       <div className={`p-2 text-center ${getLevelClass(level)}`}>
                         <strong>Level {level}</strong>
                         <div className="small">
-                          {level === 1 && 'Beginner'}
-                          {level === 2 && 'Basic'}
-                          {level === 3 && 'Intermediate'}
-                          {level === 4 && 'Advanced'}
-                          {level === 5 && 'Expert'}
+                          {getLevelDescription(level)}
                         </div>
                       </div>
                     </Col>
@@ -326,10 +447,50 @@ const SkillUpgradeGuide = () => {
                           <tr key={index}>
                             <td>{path.category}</td>
                             <td className={getLevelClass(path.currentLevel)}>
-                              Level {path.currentLevel}
+                              <Dropdown>
+                                <Dropdown.Toggle variant="link" id={`current-level-${index}`} className="p-0 text-decoration-none">
+                                  Level {path.currentLevel}
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                  {[1, 2, 3, 4, 5].map(level => (
+                                    <Dropdown.Item 
+                                      key={level} 
+                                      className={path.currentLevel === level ? 'active' : ''}
+                                      onClick={() => {
+                                        const updatedPaths = {...developmentPaths};
+                                        updatedPaths[selectedRole][index].currentLevel = level;
+                                        // This is a mock update since we're not actually changing the state
+                                        // In a real app, you would update the state here
+                                      }}
+                                    >
+                                      Level {level} - {getLevelDescription(level)}
+                                    </Dropdown.Item>
+                                  ))}
+                                </Dropdown.Menu>
+                              </Dropdown>
                             </td>
                             <td className={getLevelClass(path.targetLevel)}>
-                              Level {path.targetLevel}
+                              <Dropdown>
+                                <Dropdown.Toggle variant="link" id={`target-level-${index}`} className="p-0 text-decoration-none">
+                                  Level {path.targetLevel}
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                  {[1, 2, 3, 4, 5].map(level => (
+                                    <Dropdown.Item 
+                                      key={level} 
+                                      className={path.targetLevel === level ? 'active' : ''}
+                                      onClick={() => {
+                                        const updatedPaths = {...developmentPaths};
+                                        updatedPaths[selectedRole][index].targetLevel = level;
+                                        // This is a mock update since we're not actually changing the state
+                                        // In a real app, you would update the state here
+                                      }}
+                                    >
+                                      Level {level} - {getLevelDescription(level)}
+                                    </Dropdown.Item>
+                                  ))}
+                                </Dropdown.Menu>
+                              </Dropdown>
                             </td>
                             <td>
                               <ProgressBar 
@@ -351,20 +512,39 @@ const SkillUpgradeGuide = () => {
               <Card.Header>Development Recommendations</Card.Header>
               <Card.Body>
                 <h5>Next Steps for {selectedRole}</h5>
-                <ul>
+                <Accordion>
                   {developmentPaths[selectedRole].map((path, index) => (
                     path.currentLevel < path.targetLevel && (
-                      <li key={index}>
-                        <strong>{path.category}:</strong> Focus on advancing from Level {path.currentLevel} to Level {path.currentLevel + 1}
-                        <ul>
-                          <li>Complete relevant training courses</li>
-                          <li>Practice through hands-on projects</li>
-                          <li>Seek mentorship from higher-level colleagues</li>
-                        </ul>
-                      </li>
+                      <Accordion.Item eventKey={index.toString()} key={index}>
+                        <Accordion.Header>
+                          <strong>{path.category}:</strong> Level {path.currentLevel} → Level {path.targetLevel}
+                        </Accordion.Header>
+                        <Accordion.Body>
+                          <p>Focus on advancing from Level {path.currentLevel} to Level {path.currentLevel + 1}</p>
+                          <h6>Recommended Actions:</h6>
+                          <ul>
+                            <li>Complete relevant training courses</li>
+                            <li>Practice through hands-on projects</li>
+                            <li>Seek mentorship from higher-level colleagues</li>
+                          </ul>
+                          
+                          <h6>Learning Resources:</h6>
+                          <Dropdown>
+                            <Dropdown.Toggle variant="outline-primary" id={`resources-${index}`}>
+                              Select Learning Resources
+                            </Dropdown.Toggle>
+                            <Dropdown.Menu>
+                              <Dropdown.Item>Online Courses</Dropdown.Item>
+                              <Dropdown.Item>Books & Documentation</Dropdown.Item>
+                              <Dropdown.Item>Practice Projects</Dropdown.Item>
+                              <Dropdown.Item>Mentorship Programs</Dropdown.Item>
+                            </Dropdown.Menu>
+                          </Dropdown>
+                        </Accordion.Body>
+                      </Accordion.Item>
                     )
                   ))}
-                </ul>
+                </Accordion>
                 
                 <div className="mt-4">
                   <Button variant="success">Generate Development Plan</Button>{' '}
@@ -386,6 +566,19 @@ const SkillUpgradeGuide = () => {
                     <Card>
                       <Card.Header>Available Fields</Card.Header>
                       <Card.Body style={{ minHeight: '200px' }}>
+                        <Dropdown className="mb-3">
+                          <Dropdown.Toggle variant="outline-secondary" id="category-filter">
+                            Filter Categories
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu>
+                            <Dropdown.Item onClick={() => {}}>All Categories</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item onClick={() => {}}>Technical Skills</Dropdown.Item>
+                            <Dropdown.Item onClick={() => {}}>Soft Skills</Dropdown.Item>
+                            <Dropdown.Item onClick={() => {}}>Leadership Skills</Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                        
                         {availableFields.map((field, index) => (
                           <Button 
                             key={index}
@@ -473,8 +666,17 @@ const SkillUpgradeGuide = () => {
                               }}
                               style={{ cursor: row.type === 'category' && column.type === 'level' ? 'pointer' : 'default' }}
                             >
-                              {row.type === 'category' && column.type === 'level' ? 
-                                `${row.name} at ${column.name}` : '—'}
+                              <Dropdown>
+                                <Dropdown.Toggle variant="link" id={`cell-${rowIndex}-${colIndex}`} className="p-0 text-decoration-none">
+                                  {row.type === 'category' && column.type === 'level' ? 
+                                    `${row.name} at ${column.name}` : '—'}
+                                </Dropdown.Toggle>
+                                <Dropdown.Menu>
+                                  <Dropdown.Item onClick={() => {}}>Set as Target</Dropdown.Item>
+                                  <Dropdown.Item onClick={() => {}}>Set as Current</Dropdown.Item>
+                                  <Dropdown.Item onClick={() => {}}>View Details</Dropdown.Item>
+                                </Dropdown.Menu>
+                              </Dropdown>
                             </td>
                           ))}
                         </tr>
@@ -491,16 +693,41 @@ const SkillUpgradeGuide = () => {
                   <Card className="mt-4">
                     <Card.Header>Your Custom Development Plan</Card.Header>
                     <Card.Body>
-                      <ol>
+                      <Accordion>
                         {customPlan.map((item, index) => (
-                          <li key={index} className="mb-2">
-                            {item.description}
-                            <div className="small text-muted">
-                              Focus on reaching {item.category} Level {item.level}
-                            </div>
-                          </li>
+                          <Accordion.Item eventKey={index.toString()} key={index}>
+                            <Accordion.Header>
+                              {item.description}
+                            </Accordion.Header>
+                            <Accordion.Body>
+                              <div className="small text-muted mb-3">
+                                Focus on reaching {item.category} Level {item.level}
+                              </div>
+                              
+                              <h6>Recommended Actions:</h6>
+                              <ul>
+                                <li>Complete relevant training courses</li>
+                                <li>Practice through hands-on projects</li>
+                                <li>Seek mentorship from higher-level colleagues</li>
+                              </ul>
+                              
+                              <Form.Group className="mb-3">
+                                <Form.Label>Priority</Form.Label>
+                                <Form.Select>
+                                  <option>High</option>
+                                  <option>Medium</option>
+                                  <option>Low</option>
+                                </Form.Select>
+                              </Form.Group>
+                              
+                              <Form.Group className="mb-3">
+                                <Form.Label>Target Completion Date</Form.Label>
+                                <Form.Control type="date" />
+                              </Form.Group>
+                            </Accordion.Body>
+                          </Accordion.Item>
                         ))}
-                      </ol>
+                      </Accordion>
                       
                       <div className="mt-3">
                         <Button variant="success">Save Plan</Button>{' '}
@@ -554,12 +781,33 @@ const SkillUpgradeGuide = () => {
                             <tr key={level} className={getLevelClass(level)}>
                               <td><strong>Level {level}</strong></td>
                               <td>
-                                {selectedCategory.level_descriptions && 
-                                selectedCategory.level_descriptions[level] ? 
-                                selectedCategory.level_descriptions[level] : 
-                                `Standard level ${level} proficiency`}
+                                <Dropdown>
+                                  <Dropdown.Toggle variant="link" id={`level-desc-${level}`} className="p-0 text-decoration-none">
+                                    {selectedCategory.level_descriptions && 
+                                    selectedCategory.level_descriptions[level] ? 
+                                    selectedCategory.level_descriptions[level] : 
+                                    `Standard level ${level} proficiency`}
+                                  </Dropdown.Toggle>
+                                  <Dropdown.Menu>
+                                    <Dropdown.Item onClick={() => {}}>View Details</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => {}}>Edit Description</Dropdown.Item>
+                                    <Dropdown.Item onClick={() => {}}>Set as Target</Dropdown.Item>
+                                  </Dropdown.Menu>
+                                </Dropdown>
                               </td>
-                              <td>{memberCount} team members</td>
+                              <td>
+                                <Dropdown>
+                                  <Dropdown.Toggle variant="link" id={`members-${level}`} className="p-0 text-decoration-none">
+                                    {memberCount} team members
+                                  </Dropdown.Toggle>
+                                  <Dropdown.Menu>
+                                    <Dropdown.Header>Team Members at Level {level}</Dropdown.Header>
+                                    {employees.slice(0, memberCount).map((employee, idx) => (
+                                      <Dropdown.Item key={idx}>{employee.id}</Dropdown.Item>
+                                    ))}
+                                  </Dropdown.Menu>
+                                </Dropdown>
+                              </td>
                               <td>
                                 <ProgressBar 
                                   now={percentage} 
@@ -574,13 +822,65 @@ const SkillUpgradeGuide = () => {
                     
                     <div className="mt-4">
                       <h5>Team Skill Gap Analysis</h5>
-                      <p>
-                        Based on the current distribution, the team has strengths in levels 3-4 
-                        for {selectedCategory.category}, but could benefit from developing more 
-                        expertise at level 5.
-                      </p>
+                      <Accordion>
+                        <Accordion.Item eventKey="0">
+                          <Accordion.Header>Skill Gap Overview</Accordion.Header>
+                          <Accordion.Body>
+                            <p>
+                              Based on the current distribution, the team has strengths in levels 3-4 
+                              for {selectedCategory.category}, but could benefit from developing more 
+                              expertise at level 5.
+                            </p>
+                            
+                            <h6>Recommendations:</h6>
+                            <ul>
+                              <li>Identify team members at level 4 who can be developed to level 5</li>
+                              <li>Consider hiring or training specialists for this skill area</li>
+                              <li>Develop mentorship programs to elevate overall team capability</li>
+                            </ul>
+                          </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                          <Accordion.Header>Development Opportunities</Accordion.Header>
+                          <Accordion.Body>
+                            <p>The following team members have been identified for potential skill development:</p>
+                            
+                            <Table bordered>
+                              <thead>
+                                <tr>
+                                  <th>Team Member</th>
+                                  <th>Current Level</th>
+                                  <th>Target Level</th>
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {employees.slice(0, 3).map((employee, idx) => (
+                                  <tr key={idx}>
+                                    <td>{employee.id}</td>
+                                    <td>Level {Math.floor(Math.random() * 3) + 2}</td>
+                                    <td>Level {Math.floor(Math.random() * 2) + 4}</td>
+                                    <td>
+                                      <Dropdown>
+                                        <Dropdown.Toggle variant="outline-primary" size="sm">
+                                          Actions
+                                        </Dropdown.Toggle>
+                                        <Dropdown.Menu>
+                                          <Dropdown.Item>Create Development Plan</Dropdown.Item>
+                                          <Dropdown.Item>Assign Mentor</Dropdown.Item>
+                                          <Dropdown.Item>Schedule Training</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                      </Dropdown>
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </Table>
+                          </Accordion.Body>
+                        </Accordion.Item>
+                      </Accordion>
                       
-                      <Button variant="outline-primary" className="mt-2">
+                      <Button variant="outline-primary" className="mt-3">
                         View Detailed Analysis
                       </Button>
                     </div>
@@ -661,25 +961,71 @@ const SkillUpgradeGuide = () => {
               {selectedSkill.subcategories && selectedSkill.subcategories.length > 0 && (
                 <>
                   <h5 className="mt-4">Related Skills</h5>
-                  <Row>
+                  <Accordion>
                     {selectedSkill.subcategories.map((subcategory, index) => (
-                      <Col key={index} md={4} className="mb-2">
-                        <div className="subcategory-item">
-                          {subcategory.name}
-                        </div>
-                      </Col>
+                      <Accordion.Item eventKey={index.toString()} key={index}>
+                        <Accordion.Header>{subcategory.name}</Accordion.Header>
+                        <Accordion.Body>
+                          <div className="subcategory-details">
+                            {subcategory.description ? (
+                              <p>{subcategory.description}</p>
+                            ) : (
+                              <p>No detailed description available for this subcategory.</p>
+                            )}
+                            
+                            {subcategory.skills && subcategory.skills.length > 0 ? (
+                              <>
+                                <h6 className="mt-3">Related Skills</h6>
+                                <ul className="list-group">
+                                  {subcategory.skills.map((skill, skillIndex) => (
+                                    <li className="list-group-item" key={skillIndex}>
+                                      {skill}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </>
+                            ) : null}
+                          </div>
+                        </Accordion.Body>
+                      </Accordion.Item>
                     ))}
-                  </Row>
+                  </Accordion>
                 </>
               )}
               
               <h5 className="mt-4">Learning Resources</h5>
-              <ul>
-                <li>Online courses focused on {selectedSkill.category}</li>
-                <li>Internal training materials</li>
-                <li>Recommended books and articles</li>
-                <li>Practice projects</li>
-              </ul>
+              <Accordion>
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>Online Courses</Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      <li>Coursera: Introduction to {selectedSkill.category}</li>
+                      <li>Udemy: Advanced {selectedSkill.category} Techniques</li>
+                      <li>LinkedIn Learning: {selectedSkill.category} for Professionals</li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>Books & Documentation</Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      <li>The Complete Guide to {selectedSkill.category}</li>
+                      <li>{selectedSkill.category} Best Practices</li>
+                      <li>Official Documentation and References</li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="2">
+                  <Accordion.Header>Practice Projects</Accordion.Header>
+                  <Accordion.Body>
+                    <ul>
+                      <li>Beginner: Simple {selectedSkill.category} exercises</li>
+                      <li>Intermediate: Building a {selectedSkill.category} portfolio</li>
+                      <li>Advanced: Contributing to open-source {selectedSkill.category} projects</li>
+                    </ul>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </>
           )}
         </Modal.Body>
@@ -687,9 +1033,15 @@ const SkillUpgradeGuide = () => {
           <Button variant="secondary" onClick={() => setShowDetailModal(false)}>
             Close
           </Button>
-          <Button variant="primary">
-            Add to Development Plan
-          </Button>
+          <Dropdown as={Button.Group}>
+            <Button variant="primary">Add to Development Plan</Button>
+            <Dropdown.Toggle split variant="primary" id="add-to-plan-dropdown" />
+            <Dropdown.Menu>
+              <Dropdown.Item>Set as Current Level</Dropdown.Item>
+              <Dropdown.Item>Set as Target Level</Dropdown.Item>
+              <Dropdown.Item>Add to Custom View</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Modal.Footer>
       </Modal>
     </div>
