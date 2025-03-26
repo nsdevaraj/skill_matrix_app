@@ -1,0 +1,1790 @@
+[
+  {
+    "category": "Software Development Life Cycle (SDLC)",
+    "description": "Has a general understanding of the SDLC concept. Can identify common SDLC models (e.g., waterfall, agile).",
+    "high_description": "Advocates for effective SDLC implementation and promotes best practices within the team. Can identify and mitigate risks associated with different SDLC models.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "User Stories and Acceptance Criteria",
+    "description": "Has a basic understanding of user stories.",
+    "high_description": "Effectively utilizes user stories and acceptance criteria to drive product development and ensure quality. Advocates for effective user story management practices.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Software Release Life cycle",
+    "description": "Is aware that software goes through a release process.",
+    "high_description": "Can participate in the software release process by following defined procedures. Tracks and monitors the release process to ensure smooth delivery.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Software Testing",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Testing Concepts",
+    "description": "Has a fundamental understanding of testing terminology (e.g., bug, test case). Recognizes the importance of software testing.",
+    "high_description": "Demonstrates in-depth knowledge of advanced testing concepts (e.g., exploratory testing, shift-left testing). Analyzes test results to identify trends and improve testing strategies.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Tools for Manual Testing",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Quality Assurance vs Quality Control",
+    "description": "Can vaguely differentiate between QA and QC activities.",
+    "high_description": "Champions a proactive QA culture within the team, integrating testing throughout the development process.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Testing Life Cycle",
+    "description": "Recognizes the existence of a testing life cycle.",
+    "high_description": "Optimizes the STLC for specific projects, ensuring efficient testing and timely delivery.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Role of QA",
+    "description": "Has a general understanding of a QA tester's role.",
+    "high_description": "Proactively identifies potential risks and suggests improvements to development processes. Mentors and guides junior QA team members.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Types of Testing",
+    "description": "Can name a few different testing types (e.g., functional, usability).",
+    "high_description": "Stays updated on emerging testing trends and explores new methodologies to enhance testing effectiveness.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Bug Life Cycle",
+    "description": "Knows a bug needs to be reported.",
+    "high_description": "Analyzes bug reports to identify root causes and suggest potential fixes. Collaborates with developers to ensure timely bug resolution.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Documentation in Testing ",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Test Plan Preparation",
+    "description": "Has a general understanding of test plans. Knows a test plan outlines the scope and strategy for testing.",
+    "high_description": "Champions the use of test plans and ensures they effectively guide the testing process. Contributes to improvements in test plan templates and best practices.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Test case development",
+    "description": "Knows test cases are used for testing.",
+    "high_description": "Develops test cases optimized for automation and reusability. Mentors and guides others on best practices for test case writing.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Testing Artifacts",
+    "description": "Is aware that various documents and files are used in testing.",
+    "high_description": "Advocates for the use of appropriate testing artifacts throughout the testing process. Proactively identifies opportunities to improve the creation, management, and utilization of testing artifacts.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Release Notes",
+    "description": "Has a basic understanding of release notes.",
+    "high_description": "Crafts comprehensive release notes that effectively communicate important information to stakeholders. Collaborates with different teams (e.g., development, product) to ensure accuracy and completeness of release notes.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Bug Reporting",
+    "description": "Knows bugs need to be reported.",
+    "high_description": "Analyzes bug reports to identify root causes and potential workarounds. Collaborates effectively with developers to ensure timely resolution of bugs.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Test Execution Plan",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Test Execution Plan",
+    "description": "Has a basic understanding of creating a test execution plan and recognizes the importance of scheduling test activities.",
+    "high_description": "Expert in optimizing and strategizing test execution plans for efficient use of resources and effective management of timelines. Provides strategic insights for complex testing activities.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Smoke and Sanity Testing",
+    "description": "Understands the fundamental concepts of smoke and sanity testing, performing basic tests to verify critical functionalities.",
+    "high_description": "Expert in smoke and sanity testing, offering strategic guidance to optimize these tests for effective validation of critical functionalities. Innovates testing strategies for robust initial coverage.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Functional Testing",
+    "description": "Familiar with basic functional testing techniques and performs simple tests to verify application functionality.",
+    "high_description": "Expert in functional testing, providing strategic insights to optimize functional testing processes and ensuring thorough validation. Develops advanced frameworks for high-quality functional testing.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Regression Testing",
+    "description": "Understands the basics of regression testing and performs simple tests to ensure recent changes do not negatively impact existing functionalities.",
+    "high_description": "Expert in regression testing, offering strategic guidance to optimize regression processes and ensuring comprehensive coverage. Develops innovative strategies for high application stability.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Exploratory Testing",
+    "description": "Familiar with exploratory testing concepts, using basic techniques to explore the application and identify defects.",
+    "high_description": "Expert in exploratory testing, providing strategic insights to optimize methodologies and ensure efficient defect identification. Develops innovative approaches to enhance exploratory effectiveness.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "User Acceptance Testing",
+    "description": "Understands the basics of user acceptance testing, performing simple UAT to verify the application meets user requirements and expectations.",
+    "high_description": "Expert in UAT, offering strategic guidance to optimize UAT processes and ensure comprehensive validation of user requirements. Develops advanced UAT strategies for high user satisfaction and acceptance.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Testing Concepts",
+    "description": "Understands the basics of Performance  Security  Usability  Compatability  Internationalization and Localization  Accessibility  Testing",
+    "high_description": "Expert in conducting these Performance  Security  Usability  Compatability  Internationalization and Localization  Accessibility  Testing",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Bug Tracking Tools",
+    "description": "Knows how to use basic bug tracking tools like JIRA or Bugzilla to log and track defects.",
+    "high_description": "Expert in integrating bug tracking tools with other development and testing tools, optimizing workflows for efficient bug tracking and resolution.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Test Management Tools",
+    "description": "Familiar with basic test management tools like TestRail or Zephyr, using them to document and organize test cases.",
+    "high_description": "Expert in leveraging advanced features of test management tools to optimize test planning, execution, and reporting processes. Provides strategic insights on tool selection and implementation to enhance overall test management efficiency.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Manual Test Case Execution Tools",
+    "description": "Understands the basics of manual test case execution tools and can perform simple test executions using tools like Excel or Google Sheets.",
+    "high_description": "Expert in manual test case execution, providing strategic insights on enhancing efficiency and accuracy in manual testing processes. Develops innovative methods to integrate manual testing with overall QA strategy for maximum effectiveness.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "API Testing Tools",
+    "description": "Familiar with basic API testing concepts and tools like Postman or SOAP UI to perform simple API tests.",
+    "high_description": "Expert in API testing, developing comprehensive testing strategies to ensure robust and secure API functionality. Provides strategic guidance on best practices for API testing and tool selection to optimize testing efficiency and effectiveness.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Web Application Testing",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Understanding Web Architecture",
+    "description": "Familiar with basic web architecture concepts such as client-server model and HTTP.",
+    "high_description": "Expert in designing and evaluating web architectures, providing strategic insights on best practices and innovations to enhance web application performance and reliability.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Session management Testing",
+    "description": "Understands the basics of session management and can perform simple tests to verify session handling.",
+    "high_description": "Expert in session management testing, developing innovative solutions to secure and optimize session handling in complex web applications. Provides strategic guidance on best practices for session management security.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "URL manipulation",
+    "description": "Recognizes the basics of URL structures and can identify simple manipulation vulnerabilities.",
+    "high_description": "Expert in URL manipulation testing, developing comprehensive strategies to protect web applications from sophisticated URL-based attacks. Provides strategic insights on secure URL handling practices and advanced testing methodologies.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Business Logic Testing",
+    "description": "Understands basic business logic concepts and can perform simple tests to verify business processes.",
+    "high_description": "Expert in business logic testing, providing strategic insights on optimizing and securing complex business processes. Develops innovative testing methodologies to ensure the integrity and reliability of critical business functions in web applications.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Data Validation Testing",
+    "description": "Understands the basics of data validation and can perform simple tests to ensure input data is correctly handled.",
+    "high_description": "Expert in data validation testing, developing strategic solutions to enhance data security and integrity. Provides guidance on best practices for data validation to prevent common vulnerabilities such as SQL injection and XSS.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Mobile Application Testing",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Android Testing",
+    "description": "Understands basic Android app testing concepts and can perform simple manual tests on Android devices.",
+    "high_description": "Expert in developing and implementing comprehensive Android testing strategies, including performance and security testing. Provides strategic guidance on optimizing Android testing processes.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "iOS Testing",
+    "description": "Familiar with basic iOS app testing principles and can perform simple manual tests on iOS devices.",
+    "high_description": "Expert in formulating and executing advanced iOS testing strategies, covering all aspects from usability to security. Provides strategic insights on enhancing iOS testing methodologies.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Module Usability Testing",
+    "description": "Understands the basics of usability testing and can perform simple evaluations of application modules.",
+    "high_description": "Expert in designing and conducting in-depth usability studies, providing strategic insights to significantly enhance the overall user experience of application modules.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Testing on Different Devices and Platforms",
+    "description": "Aware of the importance of cross-platform testing and can perform basic tests on multiple devices.",
+    "high_description": "Expert in cross-platform testing, optimizing strategies to ensure seamless functionality across all devices and platforms. Provides strategic guidance on best practices for efficient cross-platform testing.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Testing on Different Emulators",
+    "description": "Knows how to set up and use basic emulators for testing purposes.",
+    "high_description": "Expert in maximizing the use of emulators for advanced testing scenarios, providing strategic insights on the effective use of emulators to enhance testing efficiency and coverage.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Mobile Security Testing",
+    "description": "Understands basic mobile security concepts and can identify common security vulnerabilities in mobile applications.",
+    "high_description": "Expert in mobile security testing, developing innovative approaches to protect applications from advanced threats. Provides strategic direction on integrating security testing into the development lifecycle.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Advanced QA methods",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Test Optimization Techniques",
+    "description": "Recognizes the value of QA certification programs and has explored basic options available in the industry.",
+    "high_description": "Possesses advanced QA certifications and advises on strategic certification paths for career advancement, promoting continuous learning and professional development.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Risk-based Testing",
+    "description": "Aware of the importance of networking and has identified a few QA communities and forums.",
+    "high_description": "Leads and organizes QA community activities, fostering professional networks and guiding others on the benefits of community engagement for career growth and knowledge sharing.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "QA Metrics and Measurement",
+    "description": "Understands basic leadership concepts and has some experience supporting team leads on small projects.",
+    "high_description": "Innovates and refines leadership practices, providing strategic direction for QA teams and projects, and promoting leadership development within the organization.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Compliance and Auditing",
+    "description": "Grasps the fundamental concepts and benefits of automation in QA and has basic knowledge of popular tools.",
+    "high_description": "Pioneers new approaches in automation, optimizing transition strategies, and providing strategic guidance on best practices for integrating and maintaining automation within the QA framework.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Test Automation basics",
+    "description": "Understands potential career paths beyond QA and has basic knowledge of related fields such as business analysis and project management.",
+    "high_description": "Innovates career development strategies, helping professionals successfully transition to and excel in diverse roles beyond QA, and offering strategic advice on professional growth.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Service Oriented Architecture (SOA) Testing",
+    "description": "Understands the need to stay current with QA trends and regularly reads relevant articles and follows key industry sources.",
+    "high_description": "Drives the adoption of cutting-edge practices and technologies, providing strategic guidance on maintaining competitiveness and innovation in the evolving QA landscape.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Automation Testing",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Logical skills",
+    "description": "Able to understand the requirements and good in problem solving. Has the ability to write programs for the simple problems",
+    "high_description": "Expertise in developing programs and algorithms. Will be able to optimize the code for performance improvements. Develop libraries that can be used across different projects",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Design, Development & Execution",
+    "description": "Should learn and understand the application flow and test cases provided. Should be able to design the script flow with good understanding of the DOM selectors. Should understand the framework and follow the coding standards and framework rules.",
+    "high_description": "Should be an expert in developing scripts. Guide teams and peers for developing complex test scripts that involves multiple interfaces and challenging environments. Should liaise with other teams to bridge the gaps and publish execution",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "API Testing",
+    "description": "Should have the basic understanding of one of the API testing tool and should know to execute API test cases",
+    "high_description": "Develop scripts using Rest Assured/Postman collection suites/Axios libraries. Implement service orchestration testing wherever applicable. Has some knowledge in Service virtualization.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Performance Testing",
+    "description": "Should learn the basics of performance testing",
+    "high_description": "Should be able to design and execute scripts by using JMeter or tools like K6. Execute script and publish reports. Provide different performance insights based on execution reports and publish Analyse areas where performance can be improved",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Tools",
+    "description": "Scripting: JavaScript/TypeScript/Python - basic level DB: Knowledge in basics of SQL",
+    "high_description": "Scripting: JavaScript/TypeScript/Python - expert level DB: SQL (DDL, DML, Joins & Queries, Views/Procedures) - MYSQL / Oracle Performance: JMeter/K6 CI/CD: Jenkins/Circle CI/Bamboo Test management: JIRA/Quality Center",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Framework",
+    "description": "UI Automation: Playwright/Selenium/Cypress/CodeceptJS API Automation: Postman ",
+    "high_description": "UI Automation: Playwright/Selenium/Cypress/CodeceptJS API Automation: Postman/Rest Assured/Axios Implement frameworks in projects, brings in enhancements to integrate with other test management tools. Develop E2E automation testing flows and frameworks.Good knowledge of architecture, common design patterns, test data generation tools highly desirable\"",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Automation Testing Process",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Estimation and Feasibility study",
+    "description": "Should have the basic understanding of estimation",
+    "high_description": "Perform proof of concepts, implement automation solutions, develop roadmap by liaising with project teams and provide estimations. Should be an expert in automation test script estimation, providing ROI etc.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Metrics",
+    "description": "Should have the basic understanding of testing metrics on automation",
+    "high_description": "Publish test metrics - schedule variance, automation pass rate, automation test coverage. Should develop solutions to collate and publish the testing metrics automatically integration with different test management platforms or tools",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Configuration management",
+    "description": "Should have basic understanding of GIT",
+    "high_description": "User management with GitHub repo, able to resolve conflicts, implement best configuration management techniques and provide training to teams to improve code quality standards",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Collaboration / Industry trends",
+    "description": "Get information on latest automation testing trends",
+    "high_description": "Manage multiple automation teams and bring in solutions that can be adapted in multiple projects. Bring in industry best practices and also suggest tools/solutions to reduce costs, faster feedbacks on product quality",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Frontend Development",
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Feature Development",
+    "description": "I can develop simple features with only UI and trivial logic.",
+    "high_description": "I can lead the feature development process, ensuring high-quality, maintainable code, and collaborate effectively with designers.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "UI Development (HTML, CSS, JSX, React)",
+    "description": "I can convert simple designs to react components using HTML, CSS and JSX.",
+    "high_description": "I can architect large-scale React applications, lead the UI development process, ensure optimal performance and maintainability, and mentor others in best practices.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "API Integration",
+    "description": "I can fetch data from APIs and display it on the frontend.",
+    "high_description": "I have a deep understanding of backend systems, databases, and can design robust API integration strategies.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Debugging",
+    "description": "I can use basic browser dev tools to debug code.",
+    "high_description": "I can mentor others in effective debugging practices and optimize the debugging process for the team.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "UI/UX Principles",
+    "description": "I have a basic understanding of UI/UX design principles.",
+    "high_description": "I can lead UI/UX discussions, advocate for user-centric design, and train others in UI/UX principles.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Version Control / CI/CD",
+    "description": "I can commit changes and push/pull from a repository.",
+    "high_description": "I can design and optimize Git workflows and CI/CD processes, and mentor others in these practices.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Backend Development",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Business analysis",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Feature Development",
+    "description": "I can develop what was asked as requirement with a mentor guiding me",
+    "high_description": "I can lead the feature development process, ensuring high-quality, maintainable code, and collaborate effectively with designers, frontend developers and testing team",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Application development",
+    "description": "I can write basic CRUD REST API(get request and send response)",
+    "high_description": "I can architect large-scale applications, lead the development process, ensure optimal performance and maintainability, and mentor others in best practices.\nHave in-depth knowledge of devops , cloud infrastructure and related components",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Database (relational database)",
+    "description": "I can write basic DDL SQL queries",
+    "high_description": "Proficiency in various database like AzureSQL, SQL server, oracle etc. understand the concept of data sharding. Performance tuning of database",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Debugging",
+    "description": "I can use basic browser dev tools to debug code.",
+    "high_description": "I can mentor others in effective debugging practices and optimize the debugging process for the team.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Version Control / CI/CD",
+    "description": "I can commit changes and push/pull from a repository.",
+    "high_description": "I can design and optimize Git workflows and CI/CD processes, and mentor others in these practices.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Dashboard development according to technical specification/layout",
+    "description": "I can develop the dashboard with standard visualizations according to a mockup",
+    "high_description": "I can implement almost any user requirements, propose the solution based on business needs",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Gathering the requirements for a dashboard targeted to a small audience",
+    "description": "I can collect requirements from 1-2 users and prepare summary for confirmation",
+    "high_description": "I can moderate a session with up to 10 customers, set up the priorities and manage the discussion, understand all the stakeholders and align the requirements with them",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Gathering the requirements for a dashboard targeted to 50+ users (large audience)",
+    "description": "I can collect the requirements from the report initiator and align with the stakeholders specified by initiator",
+    "high_description": "I can apply change management approach and design analytical workplace for mass roles",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Ability to understand that a dashboard is not needed and to propose another solution. Finding an optimal solution for a task",
+    "description": "I perform a task as requested based on how the customer understands his/her needs",
+    "high_description": "I can justifiably reject the request and propose another working solution",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Analysis of the requirements in analytics for the department. Development of a system of reports",
+    "description": "Can help collect requirements for a system of reports with guidance.",
+    "high_description": "I can design analytical workpace for a user role. Can lead the design and implementation of a complex system of reports, provide guidance to the team, and ensure the system is scalable and sustainable.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Check that the dashboard works correctly/Testing",
+    "description": "Can test the basic functionality of a dashboard with guidance: can check that filters and actions work correctly, show the dashboard to my manager / product owner",
+    "high_description": "I plan test scenario depending on the dashboard type and business purpose of the dashboard and ensure the dashboard meets quality standards.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Expertise in business skills",
+    "description": "Have a basic understanding of the business skill with guidance. I know contact persons on the customer side",
+    "high_description": "Have extensive knowledge of the business skill, can provide strategic guidance to stakeholders, and is recognized as an expert in the field. I understand business priorities and a role of my customer for the company's goals",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Data interpretation and storytelling",
+    "description": "I have a basic understanding of the data on the dashboard, can walk-through the user on what data is presented on the dashboard and answer specific questions when asked",
+    "high_description": "I understand pros ans cons of different types of data representation to minimize time to insight, can find meaningful insights in the data and present reporting to the customer through storytelling",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Dashboard as a product / Data as a product thinking",
+    "description": "Can develop a dashboard, but lacks experience or understanding of product thinking. May require direction and guidance from more senior team members.",
+    "high_description": "Can align dashboard development with product strategy and guide the team in implementing a product-focused approach. Understands the importance of product management, cross-functional collaboration, and creating a data-driven culture.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Statistics foundations",
+    "description": "I know the basic descriptional functions (average, min, max, median)",
+    "high_description": "I can formulate a hypothesis and test it using the right statistical methods",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "PowerBI Skills",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Data connection, data model preparation, direct, import, and live connections,",
+    "description": "I can connect to the data source and join several sources, know the difference between direct, import, and live connections and understand use cases for each one",
+    "high_description": "I easily can choose appropriate data connection type and understand advantages, disadvantages, and use cases for each one, can do extract optimization, incremental refresh",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Data Modeling, Ability to design and implement efficient data models",
+    "description": "I know that it exists but have not used it",
+    "high_description": "I can choose the most appropriate data model to optimize report performance, understand the underlying SQL queries performed by each type",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Mastery of the DAX for complex calculations, custom measures,  aggregations ",
+    "description": "I understand what settings to set when publishing a book to the server (tabbed view, show selections, tags, sheets etc.)",
+    "high_description": "I am able to conduct a full cycle of change management when changing certified sources",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Data Visualization, Proficiency in creating visually appealing reports",
+    "description": "I know how to open the formatting panel, do not do much formating of the dashboard (use default formatting/ formatting set in the template I am using)",
+    "high_description": "I can make visually appealing reports, not covered by standard functionality ",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Power Query Editor to perform data transformation",
+    "description": "I can apply any calculation and understand how to check how it works",
+    "high_description": "I can solve any task including merging, appending, and filtering data from various sources. I understand when it's better to move the calculation to the data source, know how to optimize calculations",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Table calculations",
+    "description": "I understand the difference between calculation and table calculation",
+    "high_description": "I understand how to improve performance of table calculations, understand specifics of Total() function",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Nested table calculations",
+    "description": "I'm not familiar with it",
+    "high_description": "I know the business cases to use this functionality, implement it where necessary",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Level of detail calculations",
+    "description": "I know that such calculations exist but did not have a case to use it",
+    "high_description": "I understand the difference between INCLUDE, EXCLUDE, and FIXED, know their place in the order of operations, can optimize calculation and choose a better solution if needed",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Order of operations",
+    "description": "I heard about it, but there was no need to go deeper",
+    "high_description": "I know practical cases when and how to change the order of operations",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Sets, bins and groups",
+    "description": "I know how and when to use groups",
+    "high_description": "I can easily work with groups, set actions and bins, apply where necessary; understand the business cases to use sets",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Parameters",
+    "description": "I know how to create a parameter",
+    "high_description": "I can implement complicated functionality based on parameters (e.g. cross-books parameters, using measure names in calculation)",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Containers, floating and tiled blocks, layouts",
+    "description": "I just drag and drop elements to the dashboard",
+    "high_description": "I build the layout without tiled containters (besides the deepest one)",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Interactivilty and actions (filter, set, parameter, URL actions)",
+    "description": "I use filter and URL actions",
+    "high_description": "I can inplement complicated interface elements (pagination, toggle buttons etc.)",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Performance analysis and improvement",
+    "description": "I'm not focused on performance",
+    "high_description": "I can optimize the dashboard on the report as well as on the data source side",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Data source architecture (long/wide tables etc.)",
+    "description": "I know the basic methods of data source optimization: hide unused fields, apply extract filters",
+    "high_description": "I plan the optimal data source for the task and understand how to choose the best architecture for a particular purpose",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Style code (naming, comments, structure)",
+    "description": "I keep field names accurate and clear",
+    "high_description": "I organize a workboook so that any middle developer can figure out how it works in 15 minutes",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Server content management",
+    "description": "I know how to publish a report to a server. That's it for now",
+    "high_description": "I conduct a full cycle of change management",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Understanding of server work principles",
+    "description": "I know the server and sites structure",
+    "high_description": "I can make basic manipulations with the server (e.g. reboot)",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Row-Level-Security",
+    "description": "Never used it but understand the concept a little",
+    "high_description": "I know several methods of RLS and understand when to use each one considering data protection policy and usability to support",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Maps, geo-data, polygons, layres",
+    "description": "I know how to make a basic card",
+    "high_description": "I can customize cards and work with different backgrounds",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "PowerBI Skills rest API development",
+    "description": "I don't know what it is",
+    "high_description": "I understand the principles and know how to find PowerBI Skills API methods, have experience with using it",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Design & viz",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Layout design: selection of the optimal report structure and dashboard composition",
+    "description": "I just include all views on the dashboard choosing the layout intuitively",
+    "high_description": "I can sketch out an approximate dashboard structure at a meeting with the business customer, convince the customer of adjustments needed to optimize the dashboard layout",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Chart type selection for a task",
+    "description": "I choose basic chart types intuitively or implement those requested by customer",
+    "high_description": "I can evaluate the data and business needs to determine the most effective way to communicate insights visually. Can guide the team in making chart type decisions. I plan the charts according to perception patterns and business sence of the task",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Selection and creation of rare chart types for a task (not line, bar, pie, crosstab)",
+    "description": "I worked only with basic visualizations so far",
+    "high_description": "I can implement any non-standard complicated visualization that would best fit the purpose of the task/ represent the data in the best possible way for correct user perception",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Using Gestalt principles in design",
+    "description": "I'm not familiar with that concept",
+    "high_description": "I can analyze the dashboard design from the point of view of that concept, can teach others",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Rules and principles of data visualization - Tufte skills",
+    "description": "I'm not familiar with that concept",
+    "high_description": "I can analyze the dashboard design from the point of view of that concept, can teach others",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Using Color and color palettes",
+    "description": "I use the colors from the style guide palettes. I understand the basics of color theory and can follow a given color scheme.",
+    "high_description": "I can guide the team in implementing consistent and effective color usage across all visualizations and applications. Can identify issues related to color usage and propose solutions. I can compose a palette and justify my decision",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Management",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Expectations management and communication about arising issues",
+    "description": "I try to meet the deadline and requirements and communicate about the issues when asked",
+    "high_description": "I know how to set the right expectations with the customer, in case of deviations I communicate them in advance",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Parallel management of 2-3 products",
+    "description": "I can focus on one dashboard at a time and find it difficult to switch context between several tasks",
+    "high_description": "I can be in the process of development of several new dashboards in parallel and implement improvements to existing reports, easily switching the context from one to another when there is a time lag in development (e.g. UAT) or change of priorities",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Full cycle release, development management",
+    "description": "I perform tasks set by PO/BA",
+    "high_description": "I make up a work plan for the team, organize teamwork and processes",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Autonomy / Self-management",
+    "description": "I plan my work in scope of a task set by my manager",
+    "high_description": "I understand the goals set for my team, plan and organize resources for their achievement and control the results",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Organization of teamwork (3-5 persons)",
+    "description": "I perform tasks set for me by my manager/PO/BA",
+    "high_description": "I understand the strenghs and weeknesses of each teammate, I take care of the interest and development of employees",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Interviewing and assessment of proficiency of candidate/employee",
+    "description": "I am not involved in the interviewing process",
+    "high_description": "I have a working framework of assessment of candidates, can conduct technical interviews assessing the technical skills, experience as well as soft skills of the candidate",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Training Product developers",
+    "description": "I am not involved in training others",
+    "high_description": "I can plan and organise team development",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Change management",
+    "description": "I communicate changes by means of any suitable channel once implemented",
+    "high_description": "I apply change management principle and CI/CD best practices",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Presentation skills",
+    "description": "I can present the results of my work to my manager/PO or small audience",
+    "high_description": "I can clearly convey my thoughts, I can conduct interesting presentation in the format of a story",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Stakeholder Management",
+    "description": "I'm not involved in communication with stakeholders",
+    "high_description": "I can establish trusted collaboration with stakeholders through builduing good communication and managing their expectations",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Creation and development of BI-community",
+    "description": "I'm not experienced enough to consult others but i can answer user questions after some guidance",
+    "high_description": "I know best practices of the community management, can build self-developing communities",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Understanding of different Product models (SaaS, On Premise), designing strategy",
+    "description": "Not familiar with the different BI models and the topic of BI strategy.",
+    "high_description": "I consider BI system as a product and manage it using the product approach.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Data preparation",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "SQL",
+    "description": "I can make a select from the table, and merge it with another tables using JOIN, UNION",
+    "high_description": "I can design and implement complex database systems, perform database administration tasks, and lead database-related projects.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Data catalogue knowledge. Orientation in data sources",
+    "description": "I know that Data catalogue exists; I'll ask more senior colleagues what sources to use for performing a task",
+    "high_description": "I know all data sources in my focus skill and understand the main data sources in all the skills I work with. I understand where to find the necessary information about data sources",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Working with version control systems",
+    "description": "I'm not familiar with that concept",
+    "high_description": "I can design and implement a version control strategy for a project or team. I understand best practices for maintaining a clean commit history, rebasing, and resolving conflicts. Can create and manage repositories, set up permissions and access controls, and implement continuous integration and deployment (CI/CD) pipelines.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Python",
+    "description": "I can write basic Python code using standard libraries and follow code style conventions.",
+    "high_description": "I can design and implement software systems using advanced Python concepts such as metaprogramming, multithreading, and multiprocessing. I can lead a team of developers working on Python projects and make architectural decisions based on business requirements.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": "ETL tool (SQL server and other)",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      },
+      {
+        "name": "Soft skills",
+        "skills": []
+      },
+      {
+        "name": NaN,
+        "skills": []
+      }
+    ]
+  },
+  {
+    "category": "Initiative",
+    "description": "I focus on performing the tasks I have",
+    "high_description": "I can initiate inprovements that will affect the business, evaluate the idea and design MVP",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Problem solving skills",
+    "description": "I can identify a problem and consider possible solutions",
+    "high_description": "I can anticipate the problem areas and associated risk levels, diagnose the problem using problem-solving tools and techniques from multiple angles, generate and evaluate several solutions considering the business priorities and stakeholders' needs",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Creating and editing text",
+    "description": "I can explain the idea in writing. I pay attention to details so the text could be too verbose",
+    "high_description": "I know and apply infostyle principles",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Documentation",
+    "description": "I can describe how to work with the dashboard",
+    "high_description": "Can develop and implement a team documentation strategy, collaborate with other departments, and manage a team of technical writers to create and maintain documentation for multiple products or projects.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Communication skills",
+    "description": "I often find myself in a situation when I and person I am talking to can't understand each other",
+    "high_description": "I can effectively solve any tasks in communication with the stakeholders and my team",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "English language",
+    "description": "A2 Pre-Intermediate",
+    "high_description": "C1 Fluent",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": []
+  },
+  {
+    "category": "Proactivility",
+    "description": "I am willing to take on new tasks and responsibilities in BI projects and actively seek guidance from team members.",
+    "high_description": "I can proactively anticipate project risks and blockers, develop and implement effective mitigation strategies, provide guidance and mentorship to team members, and drive a culture of proactivity and continuous improvement in the BI project space.",
+    "level_descriptions": {
+      "1": "Select an option",
+      "2": 1.0,
+      "3": 2.0,
+      "4": 3.0,
+      "5": 4.0
+    },
+    "subcategories": [
+      {
+        "name": "Volitional powers",
+        "skills": []
+      },
+      {
+        "name": "Leadership",
+        "skills": []
+      }
+    ]
+  }
+]

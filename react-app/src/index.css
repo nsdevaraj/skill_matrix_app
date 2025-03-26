@@ -1,0 +1,101 @@
+/* Add custom styles for the skill matrix application */
+
+body {
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+/* Skill level color indicators */
+.level-1 {
+  background-color: #ffcccc !important;
+}
+
+.level-2 {
+  background-color: #ffe6cc !important;
+}
+
+.level-3 {
+  background-color: #ffffcc !important;
+}
+
+.level-4 {
+  background-color: #ccffcc !important;
+}
+
+.level-5 {
+  background-color: #99ff99 !important;
+}
+
+/* Skill matrix table styles */
+.skill-matrix-table th {
+  background-color: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.skill-matrix-table td {
+  vertical-align: middle;
+}
+
+/* Fields keeper custom styles */
+.fields-keeper-container {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.fields-keeper-box {
+  min-height: 100px;
+  border: 1px dashed #ced4da;
+  border-radius: 0.25rem;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.fields-keeper-item {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 5px 10px;
+  margin: 5px;
+  display: inline-block;
+  cursor: grab;
+}
+
+.fields-keeper-item:active {
+  cursor: grabbing;
+}
+
+/* Category and subcategory styles */
+.category-card {
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subcategory-item {
+  padding: 10px;
+  border-left: 4px solid #007bff;
+  margin-bottom: 5px;
+}
+
+/* Team overview styles */
+.employee-card {
+  transition: transform 0.2s;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fields-keeper-container {
+    flex-direction: column;
+  }
+}

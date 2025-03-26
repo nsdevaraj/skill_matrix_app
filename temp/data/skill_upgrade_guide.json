@@ -1,0 +1,26 @@
+{
+  "title": "Skill Upgrade Guide",
+  "skill_levels": [
+    {
+      "level": 1,
+      "description": null
+    },
+    {
+      "level": 2,
+      "description": null
+    },
+    {
+      "level": 3,
+      "description": null
+    },
+    {
+      "level": 4,
+      "description": null
+    },
+    {
+      "level": 5,
+      "description": null
+    }
+  ],
+  "categories": []
+}

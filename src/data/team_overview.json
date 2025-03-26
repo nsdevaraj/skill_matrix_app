@@ -1,0 +1,155 @@
+[
+  {
+    "id": "Employee_1",
+    "position": "Lead Product Developer\n",
+    "skill_expertise": 2,
+    "risk": "middle",
+    "value": 5,
+    "potential": 1,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {
+      "Business analysis": 2.6,
+      "PowerBI Skills": 2.5789473684210527,
+      "Design & viz": 2.5,
+      "Management": 3.1666666666666665,
+      "Data preparation": 1,
+      "Additional skills": 1.7142857142857142
+    }
+  },
+  {
+    "id": "Employee_2",
+    "position": "Product Developer",
+    "skill_expertise": 1,
+    "risk": "middle",
+    "value": 5,
+    "potential": 2,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {
+      "Business analysis": 2.3,
+      "PowerBI Skills": 2.1578947368421053,
+      "Design & viz": 1.8333333333333333,
+      "Management": 2.5,
+      "Data preparation": 2.5,
+      "Additional skills": 2.142857142857143
+    }
+  },
+  {
+    "id": "Employee_3",
+    "position": "Senior Analytics Specialist",
+    "skill_expertise": null,
+    "risk": "low",
+    "value": 4,
+    "potential": 3,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {
+      "Business analysis": 2.3,
+      "PowerBI Skills": 1.631578947368421,
+      "Design & viz": 1.3333333333333333,
+      "Management": 1.5,
+      "Data preparation": 1,
+      "Additional skills": 2.2857142857142856
+    }
+  },
+  {
+    "id": "Employee_4",
+    "position": "Senior Analytics Specialist",
+    "skill_expertise": 1,
+    "risk": "middle",
+    "value": 2,
+    "potential": 3,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  },
+  {
+    "id": "Employee_5",
+    "position": "Junior Product Developer",
+    "skill_expertise": null,
+    "risk": "middle",
+    "value": 4,
+    "potential": 5,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  },
+  {
+    "id": "Employee_6",
+    "position": "BI Developer",
+    "skill_expertise": null,
+    "risk": "low",
+    "value": 2,
+    "potential": 5,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  },
+  {
+    "id": "Employee_7",
+    "position": "COE Member",
+    "skill_expertise": null,
+    "risk": "?",
+    "value": "?",
+    "potential": "?",
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  },
+  {
+    "id": "Employee_8",
+    "position": "BI Developer",
+    "skill_expertise": null,
+    "risk": "low",
+    "value": 2,
+    "potential": 3,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  },
+  {
+    "id": "Employee_9",
+    "position": "QA Lead",
+    "skill_expertise": null,
+    "risk": "high",
+    "value": 3,
+    "potential": 5,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  },
+  {
+    "id": "Employee_10",
+    "position": "QA Member",
+    "skill_expertise": null,
+    "risk": "low",
+    "value": "?",
+    "potential": "?",
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  },
+  {
+    "id": "Uncovered / expected resource demand for the next 6m",
+    "position": null,
+    "skill_expertise": 1,
+    "risk": null,
+    "value": null,
+    "potential": null,
+    "salary_increase_plan": null,
+    "salary_comment": null,
+    "free_comment": null,
+    "competencies": {}
+  }
+]
