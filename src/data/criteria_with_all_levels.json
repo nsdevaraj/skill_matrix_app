@@ -965,14 +965,6 @@
     ]
   },
   {
-    "category": "ETL tool (SQL server and other)",
-    "description": null,
-    "medium_description": null,
-    "average_description": null,
-    "high_description": null,
-    "subcategories": []
-  },
-  {
     "category": "Soft skills",
     "description": null,
     "medium_description": null,
@@ -1029,21 +1021,5 @@
         "high_description": "I can proactively anticipate project risks and blockers, develop and implement effective mitigation strategies, provide guidance and mentorship to team members, and drive a culture of proactivity and continuous improvement in the BI project space."
       }
     ]
-  },
-  {
-    "category": "Volitional powers",
-    "description": null,
-    "medium_description": null,
-    "average_description": null,
-    "high_description": null,
-    "subcategories": []
-  },
-  {
-    "category": "Leadership",
-    "description": null,
-    "medium_description": null,
-    "average_description": null,
-    "high_description": null,
-    "subcategories": []
   }
 ]
