@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Table, Form, Button, Nav, Tab, Alert, Modal, ProgressBar } from 'react-bootstrap';
-import { FieldsKeeperProvider, FieldsKeeperRootBucket } from 'react-fields-keeper';
-import skillUpgradeGuideData from '../data/skill_upgrade_guide.json';
 import criteriaData from '../data/criteria.json';
 import teamOverviewData from '../data/team_overview.json';
 
@@ -14,12 +12,11 @@ const SkillUpgradeGuide = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   
-  // Fields for the drag and drop functionality
-  const [fields, setFields] = useState({
-    rows: [],
-    columns: [],
-    values: []
-  });
+  // Fields for the custom drag and drop functionality
+  const [availableFields, setAvailableFields] = useState([]);
+  const [rowFields, setRowFields] = useState([]);
+  const [columnFields, setColumnFields] = useState([]);
+  const [customPlan, setCustomPlan] = useState([]);
   
   // Sample development paths for different roles
   const [developmentPaths] = useState({
@@ -42,7 +39,6 @@ const SkillUpgradeGuide = () => {
   });
   
   const [selectedRole, setSelectedRole] = useState('Junior Developer');
-  const [customPlan, setCustomPlan] = useState([]);
   
   useEffect(() => {
     // Load criteria data
@@ -64,24 +60,45 @@ const SkillUpgradeGuide = () => {
       type: 'level'
     }));
     
-    setFields({
-      rows: [],
-      columns: [],
-      values: [...categoryFields, ...levelFields]
-    });
+    setAvailableFields([...categoryFields, ...levelFields]);
   }, []);
 
-  // Function to handle field assignment changes
-  const handleFieldsChange = (newFields) => {
-    setFields(newFields);
+  // Function to move a field from one list to another
+  const moveField = (field, source, target) => {
+    // Remove from source
+    const sourceList = source === 'available' ? availableFields : 
+                      source === 'rows' ? rowFields : columnFields;
+    const newSourceList = sourceList.filter(f => f.id !== field.id);
     
-    // Generate custom plan based on field selections
-    if (newFields.rows.length > 0 && newFields.columns.length > 0) {
+    // Add to target
+    const targetList = target === 'available' ? availableFields : 
+                      target === 'rows' ? rowFields : columnFields;
+    const newTargetList = [...targetList, field];
+    
+    // Update state
+    if (source === 'available') setAvailableFields(newSourceList);
+    else if (source === 'rows') setRowFields(newSourceList);
+    else if (source === 'columns') setColumnFields(newSourceList);
+    
+    if (target === 'available') setAvailableFields(newTargetList);
+    else if (target === 'rows') setRowFields(newTargetList);
+    else if (target === 'columns') setColumnFields(newTargetList);
+    
+    // Update custom plan
+    updateCustomPlan(
+      target === 'rows' ? newTargetList : rowFields,
+      target === 'columns' ? newTargetList : columnFields
+    );
+  };
+  
+  // Function to update custom plan based on rows and columns
+  const updateCustomPlan = (rows, cols) => {
+    if (rows.length > 0 && cols.length > 0) {
       const newCustomPlan = [];
       
-      newFields.rows.forEach(row => {
+      rows.forEach(row => {
         if (row.type === 'category') {
-          newFields.columns.forEach(column => {
+          cols.forEach(column => {
             if (column.type === 'level') {
               const level = parseInt(column.name.split(' ')[1]);
               newCustomPlan.push({
@@ -118,48 +135,6 @@ const SkillUpgradeGuide = () => {
   const filteredCriteria = criteria.filter(category => 
     category.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  // Custom Fields Keeper component to replace the original FieldsKeeper
-  const CustomFieldsKeeper = ({ fields, onChange }) => {
-    return (
-      <FieldsKeeperProvider>
-        <div className="fields-keeper-container">
-          <Row>
-            <Col md={4}>
-              <h6>Rows</h6>
-              <div className="fields-keeper-box">
-                <FieldsKeeperRootBucket
-                  id="rows"
-                  items={fields.rows}
-                  onItemsChange={(items) => onChange({ ...fields, rows: items })}
-                />
-              </div>
-            </Col>
-            <Col md={4}>
-              <h6>Columns</h6>
-              <div className="fields-keeper-box">
-                <FieldsKeeperRootBucket
-                  id="columns"
-                  items={fields.columns}
-                  onItemsChange={(items) => onChange({ ...fields, columns: items })}
-                />
-              </div>
-            </Col>
-            <Col md={4}>
-              <h6>Available Fields</h6>
-              <div className="fields-keeper-box">
-                <FieldsKeeperRootBucket
-                  id="values"
-                  items={fields.values}
-                  onItemsChange={(items) => onChange({ ...fields, values: items })}
-                />
-              </div>
-            </Col>
-          </Row>
-        </div>
-      </FieldsKeeperProvider>
-    );
-  };
 
   return (
     <div className="skill-upgrade-guide">
@@ -404,26 +379,83 @@ const SkillUpgradeGuide = () => {
               <Card.Header>Custom Skill Matrix View</Card.Header>
               <Card.Body>
                 <p>Drag and drop categories and levels to create your custom skill matrix view.</p>
-                <CustomFieldsKeeper
-                  fields={fields}
-                  onChange={handleFieldsChange}
-                />
                 
-                {fields.rows.length > 0 && fields.columns.length > 0 ? (
+                {/* Simple drag and drop replacement */}
+                <Row className="mb-4">
+                  <Col md={4}>
+                    <Card>
+                      <Card.Header>Available Fields</Card.Header>
+                      <Card.Body style={{ minHeight: '200px' }}>
+                        {availableFields.map((field, index) => (
+                          <Button 
+                            key={index}
+                            variant="outline-secondary"
+                            className="m-1"
+                            onClick={() => {
+                              if (field.type === 'category') {
+                                moveField(field, 'available', 'rows');
+                              } else if (field.type === 'level') {
+                                moveField(field, 'available', 'columns');
+                              }
+                            }}
+                          >
+                            {field.name}
+                          </Button>
+                        ))}
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                  <Col md={4}>
+                    <Card>
+                      <Card.Header>Rows (Categories)</Card.Header>
+                      <Card.Body style={{ minHeight: '200px' }}>
+                        {rowFields.map((field, index) => (
+                          <Button 
+                            key={index}
+                            variant="primary"
+                            className="m-1"
+                            onClick={() => moveField(field, 'rows', 'available')}
+                          >
+                            {field.name} <span className="ms-2">×</span>
+                          </Button>
+                        ))}
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                  <Col md={4}>
+                    <Card>
+                      <Card.Header>Columns (Levels)</Card.Header>
+                      <Card.Body style={{ minHeight: '200px' }}>
+                        {columnFields.map((field, index) => (
+                          <Button 
+                            key={index}
+                            variant="info"
+                            className="m-1"
+                            onClick={() => moveField(field, 'columns', 'available')}
+                          >
+                            {field.name} <span className="ms-2">×</span>
+                          </Button>
+                        ))}
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </Row>
+                
+                {rowFields.length > 0 && columnFields.length > 0 ? (
                   <Table bordered className="skill-matrix-table">
                     <thead>
                       <tr>
                         <th></th>
-                        {fields.columns.map((column, index) => (
+                        {columnFields.map((column, index) => (
                           <th key={index}>{column.name}</th>
                         ))}
                       </tr>
                     </thead>
                     <tbody>
-                      {fields.rows.map((row, rowIndex) => (
+                      {rowFields.map((row, rowIndex) => (
                         <tr key={rowIndex}>
                           <td><strong>{row.name}</strong></td>
-                          {fields.columns.map((column, colIndex) => (
+                          {columnFields.map((column, colIndex) => (
                             <td 
                               key={colIndex} 
                               className={
@@ -451,7 +483,7 @@ const SkillUpgradeGuide = () => {
                   </Table>
                 ) : (
                   <Alert variant="info">
-                    Drag categories to rows and levels to columns to create your skill matrix view
+                    Click on categories and levels above to add them to your matrix view
                   </Alert>
                 )}
                 
