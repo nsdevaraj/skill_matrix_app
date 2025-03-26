@@ -26,8 +26,7 @@ const SkillUpgradeGuide = () => {
   const [showDetailModal, setShowDetailModal] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [skillLevels, setSkillLevels] = useState([1, 2, 3, 4, 5]);
-  const [selectedLevel, setSelectedLevel] = useState(null);
+  const [selectedLevel] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
 
   // Fields for the custom drag and drop functionality
@@ -206,14 +205,6 @@ const SkillUpgradeGuide = () => {
     return matchesSearch && hasSelectedLevel;
   });
 
-  // Function to toggle expanded state for a category
-  const toggleCategory = (index) => {
-    setExpandedCategories((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
-
   // Function to get level description
   const getLevelDescription = (level) => {
     switch (level) {
@@ -378,7 +369,7 @@ const SkillUpgradeGuide = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          {[1, 2, 3, 4, 5].map((level) => (
+                          {[2, 3, 4, 5].map((level) => (
                             <tr key={level} className={getLevelClass(level)}>
                               <td>
                                 <strong>Level {level}</strong>
