@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button, Form, Alert } from 'react-bootstrap';
 import teamOverviewData from '../data/team_overview.json';
-import criteriaData from '../data/criteria.json';
+import criteriaData from '../data/criteria_with_all_levels.json';
 
 const TeamOverview = () => {
   const [employees, setEmployees] = useState([]);
