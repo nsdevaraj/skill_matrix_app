@@ -1,10 +1,10 @@
 [
   {
     "category": "Software Development Life Cycle (SDLC)",
-    "description": "Has a general understanding of the SDLC concept. Can identify common SDLC models (e.g., waterfall, agile).",
-    "medium_description": "Understands the phases involved in different SDLC models (e.g., requirements gathering, testing, deployment). Recognizes the strengths and weaknesses of various SDLC models.",
-    "average_description": "Can select appropriate SDLC models based on project requirements and constraints. Can tailor SDLC models to optimize the development process.",
-    "high_description": "Advocates for effective SDLC implementation and promotes best practices within the team. Can identify and mitigate risks associated with different SDLC models.",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
     "subcategories": [
       {
         "name": "Software Development Life Cycle (SDLC)",

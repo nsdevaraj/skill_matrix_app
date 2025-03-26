@@ -21,6 +21,12 @@ const Header = () => {
             <Nav.Link as={Link} to="/criteria">
               Criteria
             </Nav.Link>
+            <Nav.Link as={Link} to="/skill-matrix">
+              Skill Matrix
+            </Nav.Link>
+            <Nav.Link as={Link} to="/employee/:id">
+              Employee Profile
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
