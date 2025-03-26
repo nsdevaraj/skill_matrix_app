@@ -1956,18 +1956,6 @@
       "salary_comment": null,
       "free_comment": null,
       "competencies": {}
-    },
-    {
-      "id": "Uncovered / expected resource demand for the next 6m",
-      "position": null,
-      "skill_expertise": 1,
-      "risk": null,
-      "value": null,
-      "potential": null,
-      "salary_increase_plan": null,
-      "salary_comment": null,
-      "free_comment": null,
-      "competencies": {}
     }
   ],
   "developer_profiles": {
