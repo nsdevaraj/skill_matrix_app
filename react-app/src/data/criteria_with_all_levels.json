@@ -1,0 +1,1049 @@
+[
+  {
+    "category": "Software Development Life Cycle (SDLC)",
+    "description": "Has a general understanding of the SDLC concept. Can identify common SDLC models (e.g., waterfall, agile).",
+    "medium_description": "Understands the phases involved in different SDLC models (e.g., requirements gathering, testing, deployment). Recognizes the strengths and weaknesses of various SDLC models.",
+    "average_description": "Can select appropriate SDLC models based on project requirements and constraints. Can tailor SDLC models to optimize the development process.",
+    "high_description": "Advocates for effective SDLC implementation and promotes best practices within the team. Can identify and mitigate risks associated with different SDLC models.",
+    "subcategories": [
+      {
+        "name": "Software Development Life Cycle (SDLC)",
+        "description": "Has a general understanding of the SDLC concept. Can identify common SDLC models (e.g., waterfall, agile).",
+        "medium_description": "Understands the phases involved in different SDLC models (e.g., requirements gathering, testing, deployment). Recognizes the strengths and weaknesses of various SDLC models.",
+        "average_description": "Can select appropriate SDLC models based on project requirements and constraints. Can tailor SDLC models to optimize the development process.",
+        "high_description": "Advocates for effective SDLC implementation and promotes best practices within the team. Can identify and mitigate risks associated with different SDLC models."
+      },
+      {
+        "name": "User Stories and Acceptance Criteria",
+        "description": "Has a basic understanding of user stories.",
+        "medium_description": "Can write simple user stories outlining user needs. Understands the importance of acceptance criteria for user stories.",
+        "average_description": "Consistently crafts clear, concise, and testable user stories. Collaborates with stakeholders to define measurable acceptance criteria.",
+        "high_description": "Effectively utilizes user stories and acceptance criteria to drive product development and ensure quality. Advocates for effective user story management practices."
+      },
+      {
+        "name": "Software Release Life cycle",
+        "description": "Is aware that software goes through a release process.",
+        "medium_description": "Identifies general stages of a software release life cycle (e.g., development, testing, deployment).",
+        "average_description": "Understands the tasks involved in different stages of the release life cycle.",
+        "high_description": "Can participate in the software release process by following defined procedures. Tracks and monitors the release process to ensure smooth delivery."
+      }
+    ]
+  },
+  {
+    "category": "Software Testing",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Testing Concepts",
+        "description": "Has a fundamental understanding of testing terminology (e.g., bug, test case). Recognizes the importance of software testing.",
+        "medium_description": "Can explain basic testing principles (e.g., black-box testing). Identifies different types of software testing (e.g., functional, non-functional).",
+        "average_description": "Applies testing methodologies to simple scenarios. Creates basic test cases.",
+        "high_description": "Demonstrates in-depth knowledge of advanced testing concepts (e.g., exploratory testing, shift-left testing). Analyzes test results to identify trends and improve testing strategies."
+      },
+      {
+        "name": "Quality Assurance vs Quality Control",
+        "description": "Can vaguely differentiate between QA and QC activities.",
+        "medium_description": "Clearly explains the distinction between proactive (QA) and reactive (QC) approaches to software quality.",
+        "average_description": "Effectively implements both QA and QC activities within a project.",
+        "high_description": "Champions a proactive QA culture within the team, integrating testing throughout the development process."
+      },
+      {
+        "name": "Testing Life Cycle",
+        "description": "Recognizes the existence of a testing life cycle.",
+        "medium_description": "Identifies the main phases of the STLC (e.g., planning, execution, reporting).",
+        "average_description": "Can navigate through the various STLC phases and their associated tasks.",
+        "high_description": "Optimizes the STLC for specific projects, ensuring efficient testing and timely delivery."
+      },
+      {
+        "name": "Role of QA",
+        "description": "Has a general understanding of a QA tester's role.",
+        "medium_description": "Articulates the key responsibilities of a QA professional (e.g., testing, bug reporting).",
+        "average_description": "Collaborates effectively with developers and other stakeholders on quality assurance activities.",
+        "high_description": "Proactively identifies potential risks and suggests improvements to development processes. Mentors and guides junior QA team members."
+      },
+      {
+        "name": "Types of Testing",
+        "description": "Can name a few different testing types (e.g., functional, usability).",
+        "medium_description": "Understands the purpose and basic principles of various testing methodologies.",
+        "average_description": "Selects and applies appropriate testing methods based on project requirements.",
+        "high_description": "Stays updated on emerging testing trends and explores new methodologies to enhance testing effectiveness."
+      },
+      {
+        "name": "Bug Life Cycle",
+        "description": "Knows a bug needs to be reported.",
+        "medium_description": "Can report bugs with basic details (e.g., steps to reproduce).",
+        "average_description": "Effectively documents bugs with clear steps, expected behavior, and actual results.",
+        "high_description": "Analyzes bug reports to identify root causes and suggest potential fixes. Collaborates with developers to ensure timely bug resolution."
+      }
+    ]
+  },
+  {
+    "category": "Documentation in Testing ",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Test Plan Preparation",
+        "description": "Has a general understanding of test plans. Knows a test plan outlines the scope and strategy for testing.",
+        "medium_description": "Can identify the key components of a test plan (e.g., test objectives, test scope, resources). Understands the importance of creating a well-defined test plan.",
+        "average_description": "Can create basic test plans outlining the overall testing approach. Tailors the test plan to the specific project and its requirements.",
+        "high_description": "Champions the use of test plans and ensures they effectively guide the testing process. Contributes to improvements in test plan templates and best practices."
+      },
+      {
+        "name": "Test case development",
+        "description": "Knows test cases are used for testing.",
+        "medium_description": "Can write simple test cases with basic steps to verify functionality. Understands the need for clear and concise test cases.",
+        "average_description": "Consistently writes well-structured test cases covering positive and negative scenarios. Uses effective techniques for test case design (e.g., equivalence partitioning, boundary value analysis).",
+        "high_description": "Develops test cases optimized for automation and reusability. Mentors and guides others on best practices for test case writing."
+      },
+      {
+        "name": "Testing Artifacts",
+        "description": "Is aware that various documents and files are used in testing.",
+        "medium_description": "Can identify common testing artifacts (e.g., test cases, test logs, defect reports).",
+        "average_description": "Understands the purpose and importance of different testing artifacts. Maintains and organizes testing artifacts effectively.",
+        "high_description": "Advocates for the use of appropriate testing artifacts throughout the testing process. Proactively identifies opportunities to improve the creation, management, and utilization of testing artifacts."
+      },
+      {
+        "name": "Release Notes",
+        "description": "Has a basic understanding of release notes.",
+        "medium_description": "Can identify the purpose of release notes (e.g., informing users about new features or fixes).",
+        "average_description": "Can write basic release notes summarizing key changes in a software release. Ensures release notes are clear and concise.",
+        "high_description": "Crafts comprehensive release notes that effectively communicate important information to stakeholders. Collaborates with different teams (e.g., development, product) to ensure accuracy and completeness of release notes."
+      },
+      {
+        "name": "Bug Reporting",
+        "description": "Knows bugs need to be reported.",
+        "medium_description": "Can report bugs with basic information (e.g., brief description of the issue).",
+        "average_description": "Effectively documents bugs with clear steps to reproduce, expected behavior, and actual results. Assigns appropriate severity levels to reported bugs.",
+        "high_description": "Analyzes bug reports to identify root causes and potential workarounds. Collaborates effectively with developers to ensure timely resolution of bugs."
+      }
+    ]
+  },
+  {
+    "category": "Test Execution Plan",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Test Execution Plan",
+        "description": "Has a basic understanding of creating a test execution plan and recognizes the importance of scheduling test activities.",
+        "medium_description": "Develops detailed test execution plans, outlining schedules and resources, and coordinates test activities effectively.",
+        "average_description": "Skilled at creating comprehensive test execution plans, ensuring smooth coordination between various testing phases and activities.",
+        "high_description": "Expert in optimizing and strategizing test execution plans for efficient use of resources and effective management of timelines. Provides strategic insights for complex testing activities."
+      },
+      {
+        "name": "Smoke and Sanity Testing",
+        "description": "Understands the fundamental concepts of smoke and sanity testing, performing basic tests to verify critical functionalities.",
+        "medium_description": "Executes thorough smoke and sanity tests to ensure the application is stable and core functionalities work as expected before proceeding with further testing.",
+        "average_description": "Proficient in designing and automating smoke and sanity tests, integrating them into the CI/CD pipeline for early issue detection.",
+        "high_description": "Expert in smoke and sanity testing, offering strategic guidance to optimize these tests for effective validation of critical functionalities. Innovates testing strategies for robust initial coverage."
+      },
+      {
+        "name": "Functional Testing",
+        "description": "Familiar with basic functional testing techniques and performs simple tests to verify application functionality.",
+        "medium_description": "Conducts detailed functional tests to ensure the application meets specified requirements under various conditions.",
+        "average_description": "Skilled in designing, executing, and automating functional tests for comprehensive coverage of functional requirements and scenarios.",
+        "high_description": "Expert in functional testing, providing strategic insights to optimize functional testing processes and ensuring thorough validation. Develops advanced frameworks for high-quality functional testing."
+      },
+      {
+        "name": "Regression Testing",
+        "description": "Understands the basics of regression testing and performs simple tests to ensure recent changes do not negatively impact existing functionalities.",
+        "medium_description": "Executes thorough regression tests to verify new changes do not introduce defects or break existing functionality.",
+        "average_description": "Proficient in designing and automating regression tests, integrating them into the CI/CD pipeline for continuous validation of application stability.",
+        "high_description": "Expert in regression testing, offering strategic guidance to optimize regression processes and ensuring comprehensive coverage. Develops innovative strategies for high application stability."
+      },
+      {
+        "name": "Exploratory Testing",
+        "description": "Familiar with exploratory testing concepts, using basic techniques to explore the application and identify defects.",
+        "medium_description": "Conducts thorough exploratory tests to uncover defects not covered by predefined test cases, using various techniques.",
+        "average_description": "Skilled in performing structured exploratory testing, identifying critical defects and improvement areas in the application.",
+        "high_description": "Expert in exploratory testing, providing strategic insights to optimize methodologies and ensure efficient defect identification. Develops innovative approaches to enhance exploratory effectiveness."
+      },
+      {
+        "name": "User Acceptance Testing",
+        "description": "Understands the basics of user acceptance testing, performing simple UAT to verify the application meets user requirements and expectations.",
+        "medium_description": "Conducts detailed user acceptance tests, collaborating with end-users to validate the application meets their needs and is ready for production.",
+        "average_description": "Skilled in planning, executing, and managing UAT processes, ensuring effective communication and collaboration with end-users for successful outcomes.",
+        "high_description": "Expert in UAT, offering strategic guidance to optimize UAT processes and ensure comprehensive validation of user requirements. Develops advanced UAT strategies for high user satisfaction and acceptance."
+      },
+      {
+        "name": "Testing Concepts",
+        "description": "Understands the basics of Performance  Security  Usability  Compatability  Internationalization and Localization  Accessibility  Testing",
+        "medium_description": "Has practical experience conducting Performance  Security  Usability  Compatability  Internationalization and Localization  Accessibility  Testing",
+        "average_description": "Proficient in conducting these Performance  Security  Usability  Compatability  Internationalization and Localization  Accessibility  Testing",
+        "high_description": "Expert in conducting these Performance  Security  Usability  Compatability  Internationalization and Localization  Accessibility  Testing"
+      }
+    ]
+  },
+  {
+    "category": "Tools for Manual Testing",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Bug Tracking Tools",
+        "description": "Knows how to use basic bug tracking tools like JIRA or Bugzilla to log and track defects.",
+        "medium_description": "Uses bug tracking tools to manage and prioritize bugs, generate reports, and ensure timely resolution of issues.",
+        "average_description": "Proficient in configuring and customizing bug tracking tools to fit project needs, training team members on their effective use.",
+        "high_description": "Expert in integrating bug tracking tools with other development and testing tools, optimizing workflows for efficient bug tracking and resolution."
+      },
+      {
+        "name": "Test Management Tools",
+        "description": "Familiar with basic test management tools like TestRail or Zephyr, using them to document and organize test cases.",
+        "medium_description": "Utilizes test management tools to plan, execute, and monitor testing activities, ensuring comprehensive test coverage.",
+        "average_description": "Proficient in customizing and integrating test management tools into the QA workflow, automating test case management and reporting.",
+        "high_description": "Expert in leveraging advanced features of test management tools to optimize test planning, execution, and reporting processes. Provides strategic insights on tool selection and implementation to enhance overall test management efficiency."
+      },
+      {
+        "name": "Manual Test Case Execution Tools",
+        "description": "Understands the basics of manual test case execution tools and can perform simple test executions using tools like Excel or Google Sheets.",
+        "medium_description": "Executes and manages test cases using manual test execution tools, ensuring accurate documentation and tracking of test results.",
+        "average_description": "Proficient in optimizing the use of manual test case execution tools, training team members on best practices, and integrating these tools with other QA processes.",
+        "high_description": "Expert in manual test case execution, providing strategic insights on enhancing efficiency and accuracy in manual testing processes. Develops innovative methods to integrate manual testing with overall QA strategy for maximum effectiveness."
+      },
+      {
+        "name": "API Testing Tools",
+        "description": "Familiar with basic API testing concepts and tools like Postman or SOAP UI to perform simple API tests.",
+        "medium_description": "Conducts thorough API testing using various tools, ensuring APIs function correctly and securely under different conditions.",
+        "average_description": "Proficient in automating API tests and integrating them into CI/CD pipelines, using tools like Postman, SoapUI, or JMeter.",
+        "high_description": "Expert in API testing, developing comprehensive testing strategies to ensure robust and secure API functionality. Provides strategic guidance on best practices for API testing and tool selection to optimize testing efficiency and effectiveness."
+      }
+    ]
+  },
+  {
+    "category": "Web Application Testing",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Understanding Web Architecture",
+        "description": "Familiar with basic web architecture concepts such as client-server model and HTTP.",
+        "medium_description": "Understands and can explain the structure and components of modern web applications, including front-end and back-end frameworks.",
+        "average_description": "Proficient in analyzing and troubleshooting complex web architecture issues, optimizing performance, and ensuring scalability.",
+        "high_description": "Expert in designing and evaluating web architectures, providing strategic insights on best practices and innovations to enhance web application performance and reliability."
+      },
+      {
+        "name": "Session management Testing",
+        "description": "Understands the basics of session management and can perform simple tests to verify session handling.",
+        "medium_description": "Conducts detailed session management tests to identify vulnerabilities and ensure secure session handling in web applications.",
+        "average_description": "Proficient in implementing and verifying advanced session management techniques, ensuring robust security and performance.",
+        "high_description": "Expert in session management testing, developing innovative solutions to secure and optimize session handling in complex web applications. Provides strategic guidance on best practices for session management security."
+      },
+      {
+        "name": "URL manipulation",
+        "description": "Recognizes the basics of URL structures and can identify simple manipulation vulnerabilities.",
+        "medium_description": "Conducts thorough testing for URL manipulation vulnerabilities, ensuring secure and proper handling of URL parameters in web applications.",
+        "average_description": "Proficient in using advanced techniques and tools to detect and mitigate URL manipulation vulnerabilities, enhancing application security.",
+        "high_description": "Expert in URL manipulation testing, developing comprehensive strategies to protect web applications from sophisticated URL-based attacks. Provides strategic insights on secure URL handling practices and advanced testing methodologies."
+      },
+      {
+        "name": "Business Logic Testing",
+        "description": "Understands basic business logic concepts and can perform simple tests to verify business processes.",
+        "medium_description": "Conducts detailed business logic tests to identify flaws in business processes, ensuring the application behaves as expected under various scenarios.",
+        "average_description": "Proficient in developing and executing comprehensive business logic tests, ensuring all business rules and workflows are accurately implemented and secure.",
+        "high_description": "Expert in business logic testing, providing strategic insights on optimizing and securing complex business processes. Develops innovative testing methodologies to ensure the integrity and reliability of critical business functions in web applications."
+      },
+      {
+        "name": "Data Validation Testing",
+        "description": "Understands the basics of data validation and can perform simple tests to ensure input data is correctly handled.",
+        "medium_description": "Conducts thorough data validation tests to identify and fix validation issues, ensuring data integrity and security in web applications.",
+        "average_description": "Proficient in implementing and verifying advanced data validation techniques, using automated tools to ensure comprehensive validation coverage.",
+        "high_description": "Expert in data validation testing, developing strategic solutions to enhance data security and integrity. Provides guidance on best practices for data validation to prevent common vulnerabilities such as SQL injection and XSS."
+      }
+    ]
+  },
+  {
+    "category": "Mobile Application Testing",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Android Testing",
+        "description": "Understands basic Android app testing concepts and can perform simple manual tests on Android devices.",
+        "medium_description": "Can create and execute test cases for Android applications using various testing tools and frameworks.",
+        "average_description": "Proficient in automating Android app tests using tools like Espresso or Appium. Mentors team members in best practices for Android testing.",
+        "high_description": "Expert in developing and implementing comprehensive Android testing strategies, including performance and security testing. Provides strategic guidance on optimizing Android testing processes."
+      },
+      {
+        "name": "iOS Testing",
+        "description": "Familiar with basic iOS app testing principles and can perform simple manual tests on iOS devices.",
+        "medium_description": "Develops and executes test cases for iOS applications, using tools such as XCTest and XCUITest.",
+        "average_description": "Proficient in automating iOS app tests and integrating them into CI/CD pipelines. Guides team members on effective iOS testing techniques.",
+        "high_description": "Expert in formulating and executing advanced iOS testing strategies, covering all aspects from usability to security. Provides strategic insights on enhancing iOS testing methodologies."
+      },
+      {
+        "name": "Module Usability Testing",
+        "description": "Understands the basics of usability testing and can perform simple evaluations of application modules.",
+        "medium_description": "Conducts detailed usability testing for individual modules, gathering and analyzing user feedback to improve user experience.",
+        "average_description": "Proficient in planning and executing comprehensive usability tests, using various methods to ensure module effectiveness and user satisfaction.",
+        "high_description": "Expert in designing and conducting in-depth usability studies, providing strategic insights to significantly enhance the overall user experience of application modules."
+      },
+      {
+        "name": "Testing on Different Devices and Platforms",
+        "description": "Aware of the importance of cross-platform testing and can perform basic tests on multiple devices.",
+        "medium_description": "Executes test cases across various devices and platforms, ensuring compatibility and functionality.",
+        "average_description": "Proficient in developing and implementing cross-platform testing strategies, using automation tools to streamline the process.",
+        "high_description": "Expert in cross-platform testing, optimizing strategies to ensure seamless functionality across all devices and platforms. Provides strategic guidance on best practices for efficient cross-platform testing."
+      },
+      {
+        "name": "Testing on Different Emulators",
+        "description": "Knows how to set up and use basic emulators for testing purposes.",
+        "medium_description": "Utilizes various emulators effectively to conduct comprehensive testing of applications in different simulated environments.",
+        "average_description": "Proficient in integrating emulator-based testing into the overall QA strategy, ensuring thorough testing across different simulated conditions.",
+        "high_description": "Expert in maximizing the use of emulators for advanced testing scenarios, providing strategic insights on the effective use of emulators to enhance testing efficiency and coverage."
+      },
+      {
+        "name": "Mobile Security Testing",
+        "description": "Understands basic mobile security concepts and can identify common security vulnerabilities in mobile applications.",
+        "medium_description": "Conducts detailed security tests on mobile applications, identifying and mitigating security risks using various tools and techniques.",
+        "average_description": "Proficient in implementing comprehensive mobile security testing strategies, ensuring robust protection against potential threats. Guides team members on best practices for mobile security testing.",
+        "high_description": "Expert in mobile security testing, developing innovative approaches to protect applications from advanced threats. Provides strategic direction on integrating security testing into the development lifecycle."
+      }
+    ]
+  },
+  {
+    "category": "Advanced QA methods",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Test Optimization Techniques",
+        "description": "Recognizes the value of QA certification programs and has explored basic options available in the industry.",
+        "medium_description": "Has earned entry-level QA certifications and applies this knowledge to improve testing practices and processes.",
+        "average_description": "Holds multiple QA certifications and encourages peers to pursue relevant certifications to enhance their skill sets.",
+        "high_description": "Possesses advanced QA certifications and advises on strategic certification paths for career advancement, promoting continuous learning and professional development."
+      },
+      {
+        "name": "Risk-based Testing",
+        "description": "Aware of the importance of networking and has identified a few QA communities and forums.",
+        "medium_description": "Regularly participates in QA communities, engages in discussions, and shares insights with peers.",
+        "average_description": "Actively builds and leverages a professional network, contributing to QA forums and attending industry events.",
+        "high_description": "Leads and organizes QA community activities, fostering professional networks and guiding others on the benefits of community engagement for career growth and knowledge sharing."
+      },
+      {
+        "name": "QA Metrics and Measurement",
+        "description": "Understands basic leadership concepts and has some experience supporting team leads on small projects.",
+        "medium_description": "Manages QA teams and projects effectively, providing guidance and support to team members.",
+        "average_description": "Demonstrates strong leadership in managing large QA teams and complex projects, implementing strategies to enhance team performance and quality.",
+        "high_description": "Innovates and refines leadership practices, providing strategic direction for QA teams and projects, and promoting leadership development within the organization."
+      },
+      {
+        "name": "Compliance and Auditing",
+        "description": "Grasps the fundamental concepts and benefits of automation in QA and has basic knowledge of popular tools.",
+        "medium_description": "Designs and implements basic automated test scripts and frameworks, transitioning from manual testing practices.",
+        "average_description": "Leads the development and execution of comprehensive automation strategies, ensuring effective integration into existing QA processes.",
+        "high_description": "Pioneers new approaches in automation, optimizing transition strategies, and providing strategic guidance on best practices for integrating and maintaining automation within the QA framework."
+      },
+      {
+        "name": "Test Automation basics",
+        "description": "Understands potential career paths beyond QA and has basic knowledge of related fields such as business analysis and project management.",
+        "medium_description": "Has explored and gained experience in roles related to QA, such as business analysis, project management, or product development.",
+        "average_description": "Mentors others on exploring and transitioning to various roles beyond QA, providing guidance on career development opportunities.",
+        "high_description": "Innovates career development strategies, helping professionals successfully transition to and excel in diverse roles beyond QA, and offering strategic advice on professional growth."
+      },
+      {
+        "name": "Service Oriented Architecture (SOA) Testing",
+        "description": "Understands the need to stay current with QA trends and regularly reads relevant articles and follows key industry sources.",
+        "medium_description": "Participates in webinars, workshops, and training sessions to stay informed about the latest trends and advancements in QA.",
+        "average_description": "Regularly attends industry conferences, contributes to publications, and implements new practices to keep QA processes up-to-date with current trends.",
+        "high_description": "Drives the adoption of cutting-edge practices and technologies, providing strategic guidance on maintaining competitiveness and innovation in the evolving QA landscape."
+      }
+    ]
+  },
+  {
+    "category": "Automation Testing",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Logical skills",
+        "description": "Able to understand the requirements and good in problem solving. Has the ability to write programs for the simple problems",
+        "medium_description": "Has the ability to write code for medium problems. Familiarity with at least one programming script languages like Java/JavaScript/Python",
+        "average_description": "Has the ability to write code for complex problems. Can review the code written by peers and provide feedback",
+        "high_description": "Expertise in developing programs and algorithms. Will be able to optimize the code for performance improvements. Develop libraries that can be used across different projects"
+      },
+      {
+        "name": "Design, Development & Execution",
+        "description": "Should learn and understand the application flow and test cases provided. Should be able to design the script flow with good understanding of the DOM selectors. Should understand the framework and follow the coding standards and framework rules.",
+        "medium_description": "Development of test scripts using at least one of the UI automation framework like TestNG/BDD/Playwright or JS framework. Can develop scripts for simple and medium test cases without any assistance.",
+        "average_description": "Development of test scripts using at least two or more of the UI automation framework like TestNG/BDD/Playwright or JS framework. Can develop scripts for complex cases. Can review the code developed by peers and provide feedback for improvement.",
+        "high_description": "Should be an expert in developing scripts. Guide teams and peers for developing complex test scripts that involves multiple interfaces and challenging environments. Should liaise with other teams to bridge the gaps and publish execution"
+      },
+      {
+        "name": "API Testing",
+        "description": "Should have the basic understanding of one of the API testing tool and should know to execute API test cases",
+        "medium_description": "Should be able to test APIs using tools like Postman. Should have knowledge on using libraries used to automate Api testing like Rest Assured/Axios etc. Design API test scripts and execute them",
+        "average_description": "Should develop test suites using API testing tools like Postman/Swagger API/Karate API. Should be able to develop scripts using Rest Assured/Postman collection suites/Axios libraries.",
+        "high_description": "Develop scripts using Rest Assured/Postman collection suites/Axios libraries. Implement service orchestration testing wherever applicable. Has some knowledge in Service virtualization."
+      },
+      {
+        "name": "Performance Testing",
+        "description": "Should learn the basics of performance testing",
+        "medium_description": "Should have knowledge in performance testing tools like JMeter. Should be able to execute performance test scripts",
+        "average_description": "Should be able to design and execute scripts by using JMeter or tools like K6. Execute script and publish reports.",
+        "high_description": "Should be able to design and execute scripts by using JMeter or tools like K6. Execute script and publish reports. Provide different performance insights based on execution reports and publish Analyse areas where performance can be improved"
+      },
+      {
+        "name": "Tools",
+        "description": "Scripting: JavaScript/TypeScript/Python - basic level DB: Knowledge in basics of SQL",
+        "medium_description": "Scripting: JavaScript/TypeScript/Python - intermediate level DB: SQL (DDL, DML) Performance: JMeter Test management: JIRA/Quality Center",
+        "average_description": "Scripting: JavaScript/TypeScript/Python - expert level DB: SQL (DDL, DML, Joins & Queries) - MYSQL / Oracle Performance: JMeter/K6 CI/CD: Jenkins/Circle CI/Bamboo Test management: JIRA/Quality Center",
+        "high_description": "Scripting: JavaScript/TypeScript/Python - expert level DB: SQL (DDL, DML, Joins & Queries, Views/Procedures) - MYSQL / Oracle Performance: JMeter/K6 CI/CD: Jenkins/Circle CI/Bamboo Test management: JIRA/Quality Center"
+      },
+      {
+        "name": "Framework",
+        "description": "UI Automation: Playwright/Selenium/Cypress/CodeceptJS API Automation: Postman ",
+        "medium_description": "UI Automation: Playwright/Selenium/Cypress/CodeceptJS API Automation: Postman/Rest Assured Must demonstrate an understanding of test automation frameworks. ",
+        "average_description": "UI Automation: Playwright/Selenium/Cypress/CodeceptJS API Automation: Postman/Rest Assured/Axios Should be bringing in enhancements to the framework and contributed towards new framework design. ",
+        "high_description": "UI Automation: Playwright/Selenium/Cypress/CodeceptJS API Automation: Postman/Rest Assured/Axios Implement frameworks in projects, brings in enhancements to integrate with other test management tools. Develop E2E automation testing flows and frameworks.Good knowledge of architecture, common design patterns, test data generation tools highly desirable\""
+      }
+    ]
+  },
+  {
+    "category": "Automation Testing Process",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Estimation and Feasibility study",
+        "description": "Should have the basic understanding of estimation",
+        "medium_description": "Should be able to estimate effort for test design based on test case complexity",
+        "average_description": "Estimate using Test Script point estimation techniques. Should be able to perform feasibility study and provide estimation based on the technical complexities and interfaces involved.",
+        "high_description": "Perform proof of concepts, implement automation solutions, develop roadmap by liaising with project teams and provide estimations. Should be an expert in automation test script estimation, providing ROI etc."
+      },
+      {
+        "name": "Metrics",
+        "description": "Should have the basic understanding of testing metrics on automation",
+        "medium_description": "Collate data for publishing test metrics",
+        "average_description": "Collate and publish following test metrics - schedule variance, automation pass rate, automation test coverage",
+        "high_description": "Publish test metrics - schedule variance, automation pass rate, automation test coverage. Should develop solutions to collate and publish the testing metrics automatically integration with different test management platforms or tools"
+      },
+      {
+        "name": "Configuration management",
+        "description": "Should have basic understanding of GIT",
+        "medium_description": "Perform git processes like commit, push, clone and logging a PR",
+        "average_description": "Perform git processes like commit, push, clone and logging a PR. Able to merge PR's, provide comments and provide plugins to improve code quality like Eslint",
+        "high_description": "User management with GitHub repo, able to resolve conflicts, implement best configuration management techniques and provide training to teams to improve code quality standards"
+      },
+      {
+        "name": "Collaboration / Industry trends",
+        "description": "Get information on latest automation testing trends",
+        "medium_description": "Get basic knowledge in latest industry trends in automation testing",
+        "average_description": "Mentor junior team members and drive automation using the framework and its re-use. Allocation of tasks, track the progress of team members. Work closely with Functional QA and DEV teams to close out the automation coverage gaps. Get some exposure on current automation testing trends",
+        "high_description": "Manage multiple automation teams and bring in solutions that can be adapted in multiple projects. Bring in industry best practices and also suggest tools/solutions to reduce costs, faster feedbacks on product quality"
+      }
+    ]
+  },
+  {
+    "category": "Frontend Development",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Feature Development",
+        "description": "I can develop simple features with only UI and trivial logic.",
+        "medium_description": "I can implement features with UI and logic requiring proper data structure and state management.",
+        "average_description": "I can architect complex features with sophisticated data structures, data manipulation, and complex lifecycle flow from scratch.",
+        "high_description": "I can lead the feature development process, ensuring high-quality, maintainable code, and collaborate effectively with designers."
+      },
+      {
+        "name": "UI Development (HTML, CSS, JSX, React)",
+        "description": "I can convert simple designs to react components using HTML, CSS and JSX.",
+        "medium_description": "I can create reusable react components with state management maintaining proper code quality",
+        "average_description": "I can handle complex design implementations, ensuring pixel-perfect accuracy, responsiveness, and performance optimization using advanced React patterns and hooks.",
+        "high_description": "I can architect large-scale React applications, lead the UI development process, ensure optimal performance and maintainability, and mentor others in best practices."
+      },
+      {
+        "name": "API Integration",
+        "description": "I can fetch data from APIs and display it on the frontend.",
+        "medium_description": "I understand basic backend concepts, JWT, and sessions for API integration.",
+        "average_description": "I can handle complex API integrations, including authentication, error handling, and state management.",
+        "high_description": "I have a deep understanding of backend systems, databases, and can design robust API integration strategies."
+      },
+      {
+        "name": "Debugging",
+        "description": "I can use basic browser dev tools to debug code.",
+        "medium_description": "I can use advanced features of browser dev tools for debugging complex issues.",
+        "average_description": "I can systematically debug and resolve complex issues using a variety of tools and techniques.",
+        "high_description": "I can mentor others in effective debugging practices and optimize the debugging process for the team."
+      },
+      {
+        "name": "UI/UX Principles",
+        "description": "I have a basic understanding of UI/UX design principles.",
+        "medium_description": "I can implement designs and follow best practices for user-centric design.",
+        "average_description": "I can critique and improve designs for better user experience and functionality.",
+        "high_description": "I can lead UI/UX discussions, advocate for user-centric design, and train others in UI/UX principles."
+      },
+      {
+        "name": "Version Control / CI/CD",
+        "description": "I can commit changes and push/pull from a repository.",
+        "medium_description": "I understand Git workflows and can handle branches and pull requests.",
+        "average_description": "I can manage complex Git workflows and implement CI/CD pipelines.",
+        "high_description": "I can design and optimize Git workflows and CI/CD processes, and mentor others in these practices."
+      }
+    ]
+  },
+  {
+    "category": "Backend Development",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Feature Development",
+        "description": "I can develop what was asked as requirement with a mentor guiding me",
+        "medium_description": "I can understand the requirement and provide solutions and work independently without any assistance.",
+        "average_description": "I can architect complex features with sophisticated data structures, data manipulation, and complete workflow from scratch.\nI maintain document for the features i developed.\nI also perform effective code review",
+        "high_description": "I can lead the feature development process, ensuring high-quality, maintainable code, and collaborate effectively with designers, frontend developers and testing team"
+      },
+      {
+        "name": "Application development",
+        "description": "I can write basic CRUD REST API(get request and send response)",
+        "medium_description": "I can code complex logic in optimized way and deliver code with minimal to 0 bugs. Have basic knowledge of docker .Understand usage of redis, workers. I can write neat code with proper SOLID principle in place.",
+        "average_description": "I can write features that can process hundred thousand records in the backend with optimized space and time complexity. \nHave knowledge of cloud system, Queues, sockets",
+        "high_description": "I can architect large-scale applications, lead the development process, ensure optimal performance and maintainability, and mentor others in best practices.\nHave in-depth knowledge of devops , cloud infrastructure and related components"
+      },
+      {
+        "name": "Database (relational database)",
+        "description": "I can write basic DDL SQL queries",
+        "medium_description": "Write SQL queries with JOIN, subqueries. Ability to design normalised database schema/tables , transactions",
+        "average_description": "Understand how indexing works and decide how to have efficient reads or writes. Understand concepts of partition",
+        "high_description": "Proficiency in various database like AzureSQL, SQL server, oracle etc. understand the concept of data sharding. Performance tuning of database"
+      },
+      {
+        "name": "Debugging",
+        "description": "I can use basic browser dev tools to debug code.",
+        "medium_description": "I can use advanced features of browser dev tools for debugging complex issues.",
+        "average_description": "I can systematically debug and resolve complex issues using a variety of tools and techniques.",
+        "high_description": "I can mentor others in effective debugging practices and optimize the debugging process for the team."
+      },
+      {
+        "name": "Version Control / CI/CD",
+        "description": "I can commit changes and push/pull from a repository.",
+        "medium_description": "I understand Git workflows and can handle branches, conflicts and pull requests.",
+        "average_description": "I can manage complex Git workflows and implement CI/CD pipelines.",
+        "high_description": "I can design and optimize Git workflows and CI/CD processes, and mentor others in these practices."
+      }
+    ]
+  },
+  {
+    "category": "Business analysis",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Dashboard development according to technical specification/layout",
+        "description": "I can develop the dashboard with standard visualizations according to a mockup",
+        "medium_description": "I can implement the dashboard according to the mockup and find the solutions",
+        "average_description": "I can implement the dashboard according to the mockup and business requirements, apply appropriate layout",
+        "high_description": "I can implement almost any user requirements, propose the solution based on business needs"
+      },
+      {
+        "name": "Gathering the requirements for a dashboard targeted to a small audience",
+        "description": "I can collect requirements from 1-2 users and prepare summary for confirmation",
+        "medium_description": "I can collect requirements according to a checklist, prepare the task and layout and confirm it with the customers",
+        "average_description": "I can collect requirements from 1-2 users, ask business-process specific questions as well as standard ones according to a checklist and propose preliminary structure of a dashboard",
+        "high_description": "I can moderate a session with up to 10 customers, set up the priorities and manage the discussion, understand all the stakeholders and align the requirements with them"
+      },
+      {
+        "name": "Gathering the requirements for a dashboard targeted to 50+ users (large audience)",
+        "description": "I can collect the requirements from the report initiator and align with the stakeholders specified by initiator",
+        "medium_description": "I can form the working group together with the report initiator and sum up their expectations using the check-list",
+        "average_description": "I can conduct a research of users' behavior and needs, investigate the business processes",
+        "high_description": "I can apply change management approach and design analytical workplace for mass roles"
+      },
+      {
+        "name": "Ability to understand that a dashboard is not needed and to propose another solution. Finding an optimal solution for a task",
+        "description": "I perform a task as requested based on how the customer understands his/her needs",
+        "medium_description": "If the request seems to be covered by existing solutions I readdress it. Othervise I perform it as requested",
+        "average_description": "I analyse the requirements from the point of view of underlying business needs and propose an alternative ready solution if needed",
+        "high_description": "I can justifiably reject the request and propose another working solution"
+      },
+      {
+        "name": "Analysis of the requirements in analytics for the department. Development of a system of reports",
+        "description": "Can help collect requirements for a system of reports with guidance.",
+        "medium_description": "Can collect requirements for a system of reports independently and develop basic reports. I can make an interview with customers to arrange the dashboards actuality",
+        "average_description": "Can prioritize requirements and develop a system of reports that meets business needs and aligns with industry best practices. I understand the use cases for the dashboards and make a research on necessary improvements",
+        "high_description": "I can design analytical workpace for a user role. Can lead the design and implementation of a complex system of reports, provide guidance to the team, and ensure the system is scalable and sustainable."
+      },
+      {
+        "name": "Check that the dashboard works correctly/Testing",
+        "description": "Can test the basic functionality of a dashboard with guidance: can check that filters and actions work correctly, show the dashboard to my manager / product owner",
+        "medium_description": "Can test the functionality of a dashboard independently, identify and document issues. I compare the dashboard with the task, validate the data via comparison with other reports, involve the team in peer review, check if my palette is in line with style guide",
+        "average_description": "I make full-cycle testing (from data set and methodology validation to UX), understand customer needs, involve customers in testing.",
+        "high_description": "I plan test scenario depending on the dashboard type and business purpose of the dashboard and ensure the dashboard meets quality standards."
+      },
+      {
+        "name": "Expertise in business skills",
+        "description": "Have a basic understanding of the business skill with guidance. I know contact persons on the customer side",
+        "medium_description": "I have general understanding of the business process of the customer, more detailed understanding I get in the process of requirements collection",
+        "average_description": "Have deep expertise in the business skill and can apply it to analytics solutions. I understand the business process and its place in the company's lifecycle, know the management structure of the customer service",
+        "high_description": "Have extensive knowledge of the business skill, can provide strategic guidance to stakeholders, and is recognized as an expert in the field. I understand business priorities and a role of my customer for the company's goals"
+      },
+      {
+        "name": "Data interpretation and storytelling",
+        "description": "I have a basic understanding of the data on the dashboard, can walk-through the user on what data is presented on the dashboard and answer specific questions when asked",
+        "medium_description": "I can explain the data on the dashboard explaining the logic of specific metrics and what conclusions can be made using that data",
+        "average_description": "I can define the best solution for data presentation, investigate the data from the customer's perspective, present the dashboard and explain the data as telling a story including specific insights found in the data",
+        "high_description": "I understand pros ans cons of different types of data representation to minimize time to insight, can find meaningful insights in the data and present reporting to the customer through storytelling"
+      },
+      {
+        "name": "Dashboard as a product / Data as a product thinking",
+        "description": "Can develop a dashboard, but lacks experience or understanding of product thinking. May require direction and guidance from more senior team members.",
+        "medium_description": "Can create a dashboard with user needs and product thinking in mind. Understands the importance of considering the user experience, creating an MVP, and iterating based on feedback.",
+        "average_description": "Can design a dashboard as a product with a deep understanding of user experience and business needs. Understands the importance of CustDev, product metrics, and creating a holistic product vision.",
+        "high_description": "Can align dashboard development with product strategy and guide the team in implementing a product-focused approach. Understands the importance of product management, cross-functional collaboration, and creating a data-driven culture."
+      },
+      {
+        "name": "Statistics foundations",
+        "description": "I know the basic descriptional functions (average, min, max, median)",
+        "medium_description": "I know median, quartilles, percentiles and understand when to use it",
+        "average_description": "Understand the descriptive statistics, know how to use correlarion, regression analysis and how to prepare data for it",
+        "high_description": "I can formulate a hypothesis and test it using the right statistical methods"
+      }
+    ]
+  },
+  {
+    "category": "PowerBI Skills",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Data connection, data model preparation, direct, import, and live connections,",
+        "description": "I can connect to the data source and join several sources, know the difference between direct, import, and live connections and understand use cases for each one",
+        "medium_description": "I know the difference between direct, import, and live connections and understand use cases for each one; know different connection type (join, relationships, blend, union) while mostly using extracts on joints and unions",
+        "average_description": "I easily can choose an appropriate data connection type (join, relationships, blend, union as well as live/extract) and understand advantages, disadvantages, and use cases for each one",
+        "high_description": "I easily can choose appropriate data connection type and understand advantages, disadvantages, and use cases for each one, can do extract optimization, incremental refresh"
+      },
+      {
+        "name": "Data Modeling, Ability to design and implement efficient data models",
+        "description": "I know that it exists but have not used it",
+        "medium_description": "I understand the relationships between tables, calculated columns, and measures to support analytical requirements, understand the limitations of each one",
+        "average_description": "I can choose the most appropriate data model and optimize report performance",
+        "high_description": "I can choose the most appropriate data model to optimize report performance, understand the underlying SQL queries performed by each type"
+      },
+      {
+        "name": "Mastery of the DAX for complex calculations, custom measures,  aggregations ",
+        "description": "I understand what settings to set when publishing a book to the server (tabbed view, show selections, tags, sheets etc.)",
+        "medium_description": "I can publish data source and how to connect to a publised data source",
+        "average_description": "I understand how to test changes caused by modification of the data source",
+        "high_description": "I am able to conduct a full cycle of change management when changing certified sources"
+      },
+      {
+        "name": "Data Visualization, Proficiency in creating visually appealing reports",
+        "description": "I know how to open the formatting panel, do not do much formating of the dashboard (use default formatting/ formatting set in the template I am using)",
+        "medium_description": "I know how to change colors, axes formating, text size and font",
+        "average_description": "I know what to pay attention to when working with visuals, keep formatting and design consistent in the whole report",
+        "high_description": "I can make visually appealing reports, not covered by standard functionality "
+      },
+      {
+        "name": "Power Query Editor to perform data transformation",
+        "description": "I can apply any calculation and understand how to check how it works",
+        "medium_description": "I understand the difference between shaping tasks, including merging, appending, and filtering data from various sources.",
+        "average_description": "I can solve any task using calculations. I understand when it's better to move the calculation to the data source",
+        "high_description": "I can solve any task including merging, appending, and filtering data from various sources. I understand when it's better to move the calculation to the data source, know how to optimize calculations"
+      },
+      {
+        "name": "Table calculations",
+        "description": "I understand the difference between calculation and table calculation",
+        "medium_description": "I can use any table calculation and understand how it works",
+        "average_description": "I can easity set up addressing and partioning",
+        "high_description": "I understand how to improve performance of table calculations, understand specifics of Total() function"
+      },
+      {
+        "name": "Nested table calculations",
+        "description": "I'm not familiar with it",
+        "medium_description": "I know how to use it through \"Add secondary calculation\"",
+        "average_description": "I understand how nested calculations work",
+        "high_description": "I know the business cases to use this functionality, implement it where necessary"
+      },
+      {
+        "name": "Level of detail calculations",
+        "description": "I know that such calculations exist but did not have a case to use it",
+        "medium_description": "I understand in what cases to use it, can apply a LOD calculation if necessary through trying different options and choosing the correct one",
+        "average_description": "I understand the difference between INCLUDE, EXCLUDE, and FIXED, know their place in the order of operations",
+        "high_description": "I understand the difference between INCLUDE, EXCLUDE, and FIXED, know their place in the order of operations, can optimize calculation and choose a better solution if needed"
+      },
+      {
+        "name": "Order of operations",
+        "description": "I heard about it, but there was no need to go deeper",
+        "medium_description": "I know the order of calculations and its effect, know the difference betwwen the context and standard filters",
+        "average_description": "I am confident in the understanding on how it works, can easily manage filters as necessary",
+        "high_description": "I know practical cases when and how to change the order of operations"
+      },
+      {
+        "name": "Sets, bins and groups",
+        "description": "I know how and when to use groups",
+        "medium_description": "I can create and use sets, bins and groups",
+        "average_description": "I can easily work with groups, set actions and bins, apply where necessary",
+        "high_description": "I can easily work with groups, set actions and bins, apply where necessary; understand the business cases to use sets"
+      },
+      {
+        "name": "Parameters",
+        "description": "I know how to create a parameter",
+        "medium_description": "I can make customizable columns based on a parameter",
+        "average_description": "I can implement parameter actions, use dynamic parameters",
+        "high_description": "I can implement complicated functionality based on parameters (e.g. cross-books parameters, using measure names in calculation)"
+      },
+      {
+        "name": "Containers, floating and tiled blocks, layouts",
+        "description": "I just drag and drop elements to the dashboard",
+        "medium_description": "I understand the difference between different types of containters and how to use them",
+        "average_description": "I know how to set up width and height of an element in pixels, use hidden containers",
+        "high_description": "I build the layout without tiled containters (besides the deepest one)"
+      },
+      {
+        "name": "Interactivilty and actions (filter, set, parameter, URL actions)",
+        "description": "I use filter and URL actions",
+        "medium_description": "I can use all types of actions",
+        "average_description": "I know how to optimise user experience and report performance with actions",
+        "high_description": "I can inplement complicated interface elements (pagination, toggle buttons etc.)"
+      },
+      {
+        "name": "Performance analysis and improvement",
+        "description": "I'm not focused on performance",
+        "medium_description": "I know several principles of performance optimization and try to take them into account when building the dashboard",
+        "average_description": "I can make and analyse a performance recording",
+        "high_description": "I can optimize the dashboard on the report as well as on the data source side"
+      },
+      {
+        "name": "Data source architecture (long/wide tables etc.)",
+        "description": "I know the basic methods of data source optimization: hide unused fields, apply extract filters",
+        "medium_description": "I can set a task to the Data engineer on preparation of a data mart",
+        "average_description": "I know how to make an optimal data source for PowerBI Skills report",
+        "high_description": "I plan the optimal data source for the task and understand how to choose the best architecture for a particular purpose"
+      },
+      {
+        "name": "Style code (naming, comments, structure)",
+        "description": "I keep field names accurate and clear",
+        "medium_description": "I comment calculations and SQL code",
+        "average_description": "I organize the report to make it easy to support (use descriptions for fields and sheets)",
+        "high_description": "I organize a workboook so that any middle developer can figure out how it works in 15 minutes"
+      },
+      {
+        "name": "Server content management",
+        "description": "I know how to publish a report to a server. That's it for now",
+        "medium_description": "I can manager access effectively",
+        "average_description": "I understand how the changes I initiate can affect the users",
+        "high_description": "I conduct a full cycle of change management"
+      },
+      {
+        "name": "Understanding of server work principles",
+        "description": "I know the server and sites structure",
+        "medium_description": "I'm familiar with site status reports",
+        "average_description": "I know the technical architecture of the server",
+        "high_description": "I can make basic manipulations with the server (e.g. reboot)"
+      },
+      {
+        "name": "Row-Level-Security",
+        "description": "Never used it but understand the concept a little",
+        "medium_description": "I can set up RLS with a guidance",
+        "average_description": "I know data sources aimed to set-up RLS, understand the logic of RLS methods",
+        "high_description": "I know several methods of RLS and understand when to use each one considering data protection policy and usability to support"
+      },
+      {
+        "name": "Maps, geo-data, polygons, layres",
+        "description": "I know how to make a basic card",
+        "medium_description": "I know how to implement a map with routes",
+        "average_description": "I know geo-functions, can make geo-joins, and work with layers",
+        "high_description": "I can customize cards and work with different backgrounds"
+      },
+      {
+        "name": "PowerBI Skills rest API development",
+        "description": "I don't know what it is",
+        "medium_description": "I heard about it but did not go deep",
+        "average_description": "I understand the principles and know how to find PowerBI Skills API methods",
+        "high_description": "I understand the principles and know how to find PowerBI Skills API methods, have experience with using it"
+      }
+    ]
+  },
+  {
+    "category": "Design & viz",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Layout design: selection of the optimal report structure and dashboard composition",
+        "description": "I just include all views on the dashboard choosing the layout intuitively",
+        "medium_description": "I draw a layout on paper or in any graphic editor to make sure the dashboard has a meaningful layout",
+        "average_description": "I can sketch out an approximate dashboard structure at a meeting with the business customer, suggest adjustments to the mock up proposed by the customer to optimize the dashboard layout",
+        "high_description": "I can sketch out an approximate dashboard structure at a meeting with the business customer, convince the customer of adjustments needed to optimize the dashboard layout"
+      },
+      {
+        "name": "Chart type selection for a task",
+        "description": "I choose basic chart types intuitively or implement those requested by customer",
+        "medium_description": "I have in mind a standard pack of visualizations that fit particular purposes. I can identify appropriate chart types for more complex tasks. Can also recognize when a chart type may not be appropriate for the given data.",
+        "average_description": "I can reasonably choose an optimal chart for a specific task. I can also optimize chart types for readability, accuracy, and aesthetics.",
+        "high_description": "I can evaluate the data and business needs to determine the most effective way to communicate insights visually. Can guide the team in making chart type decisions. I plan the charts according to perception patterns and business sence of the task"
+      },
+      {
+        "name": "Selection and creation of rare chart types for a task (not line, bar, pie, crosstab)",
+        "description": "I worked only with basic visualizations so far",
+        "medium_description": "I use complex visualizations to make the dashboard more beautiful",
+        "average_description": "I understand the tasks which can be solved by complicated types of charts and their use cases",
+        "high_description": "I can implement any non-standard complicated visualization that would best fit the purpose of the task/ represent the data in the best possible way for correct user perception"
+      },
+      {
+        "name": "Using Gestalt principles in design",
+        "description": "I'm not familiar with that concept",
+        "medium_description": "I heard about that, apply similar principles intuitively",
+        "average_description": "I understand each principle and how to use it in PowerBI Skills design",
+        "high_description": "I can analyze the dashboard design from the point of view of that concept, can teach others"
+      },
+      {
+        "name": "Rules and principles of data visualization - Tufte skills",
+        "description": "I'm not familiar with that concept",
+        "medium_description": "I heard about that, apply similar principles intuitively",
+        "average_description": "I understand each principle and how to use it in PowerBI Skills design",
+        "high_description": "I can analyze the dashboard design from the point of view of that concept, can teach others"
+      },
+      {
+        "name": "Using Color and color palettes",
+        "description": "I use the colors from the style guide palettes. I understand the basics of color theory and can follow a given color scheme.",
+        "medium_description": "I can select appropriate color palettes for different visualizations and can use color effectively to highlight data",
+        "average_description": "I can design custom color palettes for a project or brand and can use color to evoke emotions and tell stories. I choose the colors from the point of view of a story, psychological impact, harmony",
+        "high_description": "I can guide the team in implementing consistent and effective color usage across all visualizations and applications. Can identify issues related to color usage and propose solutions. I can compose a palette and justify my decision"
+      }
+    ]
+  },
+  {
+    "category": "Management",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Expectations management and communication about arising issues",
+        "description": "I try to meet the deadline and requirements and communicate about the issues when asked",
+        "medium_description": "I report a problem as soon as I see it (an issue that appeared or possible delay of set ETA)",
+        "average_description": "I evaluate the task and situation and communicate the risks beforehands to manage proper expectations; if issues appear, communicate them right away for fast resolution",
+        "high_description": "I know how to set the right expectations with the customer, in case of deviations I communicate them in advance"
+      },
+      {
+        "name": "Parallel management of 2-3 products",
+        "description": "I can focus on one dashboard at a time and find it difficult to switch context between several tasks",
+        "medium_description": "I can be in the process of development of one new dashboard and implement improvements to 1-2 existing dashboards in parallel (while waiting for some customer clarifications or UAT results of the first one)",
+        "average_description": "I can be in the process of development of several new dashboards in parallel, switching the context from one to another when there is a time lag in development (e.g. UAT) or change of priorities",
+        "high_description": "I can be in the process of development of several new dashboards in parallel and implement improvements to existing reports, easily switching the context from one to another when there is a time lag in development (e.g. UAT) or change of priorities"
+      },
+      {
+        "name": "Full cycle release, development management",
+        "description": "I perform tasks set by PO/BA",
+        "medium_description": "I make up a work plan for my area of \u200b\u200bresponsibility, I control deadlines myself, my manager controls quality",
+        "average_description": "I make up a work plan for my area of \u200b\u200bresponsibility, perform full control of deadlines and quality",
+        "high_description": "I make up a work plan for the team, organize teamwork and processes"
+      },
+      {
+        "name": "Autonomy / Self-management",
+        "description": "I plan my work in scope of a task set by my manager",
+        "medium_description": "I can plan my time and prioritize tasks set by my manager",
+        "average_description": "I understand the goals of my work, plan and organize resources for their achievement and control the results",
+        "high_description": "I understand the goals set for my team, plan and organize resources for their achievement and control the results"
+      },
+      {
+        "name": "Organization of teamwork (3-5 persons)",
+        "description": "I perform tasks set for me by my manager/PO/BA",
+        "medium_description": "I perform tasks set for me but I can actively participate in team plans preparation",
+        "average_description": "I understand how to organize the work, can backfill the manager during his/her vacation",
+        "high_description": "I understand the strenghs and weeknesses of each teammate, I take care of the interest and development of employees"
+      },
+      {
+        "name": "Interviewing and assessment of proficiency of candidate/employee",
+        "description": "I am not involved in the interviewing process",
+        "medium_description": "I am not involved in the interviewing process but I can prepare a task for a candidate",
+        "average_description": "I can conduct a technical interview and access the skills of the candidate for a Jun-Reg-Sen position in my team",
+        "high_description": "I have a working framework of assessment of candidates, can conduct technical interviews assessing the technical skills, experience as well as soft skills of the candidate"
+      },
+      {
+        "name": "Training Product developers",
+        "description": "I am not involved in training others",
+        "medium_description": "I can support newcomers with the topics of corporate structure, systems and processes",
+        "average_description": "I can provide knowledge transfers on any BI-related topic and support others in solving complicated tasks",
+        "high_description": "I can plan and organise team development"
+      },
+      {
+        "name": "Change management",
+        "description": "I communicate changes by means of any suitable channel once implemented",
+        "medium_description": "I understang the general impact of changes I make, communicate the changes by means of email notification before implementation",
+        "average_description": "I understang the impact of changes I make, understand change management principles, communicate planned changes well in advance. I make official communication of the changes I make",
+        "high_description": "I apply change management principle and CI/CD best practices"
+      },
+      {
+        "name": "Presentation skills",
+        "description": "I can present the results of my work to my manager/PO or small audience",
+        "medium_description": "I can prepare clear and laconic slides and present results of my work",
+        "average_description": "I can clearly convey my thoughts, I know which communication channels are best used to present different results of the work, can present to a big audience",
+        "high_description": "I can clearly convey my thoughts, I can conduct interesting presentation in the format of a story"
+      },
+      {
+        "name": "Stakeholder Management",
+        "description": "I'm not involved in communication with stakeholders",
+        "medium_description": "I understand in general the needs and interests of my customers, but I'm not actively involved in communication",
+        "average_description": "I understand the stakeholders' needs and interests, I aim to establish trusted relationships with stakeholders",
+        "high_description": "I can establish trusted collaboration with stakeholders through builduing good communication and managing their expectations"
+      },
+      {
+        "name": "Creation and development of BI-community",
+        "description": "I'm not experienced enough to consult others but i can answer user questions after some guidance",
+        "medium_description": "I'm ready to help my colleagues and train them if I can",
+        "average_description": "I create an environment for experience exchange within the team, organize regular meetings",
+        "high_description": "I know best practices of the community management, can build self-developing communities"
+      },
+      {
+        "name": "Understanding of different Product models (SaaS, On Premise), designing strategy",
+        "description": "Not familiar with the different BI models and the topic of BI strategy.",
+        "medium_description": "I understand the difference between the mentioned BI models, not actively involved in the topic of BI strategy.",
+        "average_description": "I understand the different BI models, for which cases and how those are best implemented in the oragnization.",
+        "high_description": "I consider BI system as a product and manage it using the product approach."
+      }
+    ]
+  },
+  {
+    "category": "Data preparation",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "SQL",
+        "description": "I can make a select from the table, and merge it with another tables using JOIN, UNION",
+        "medium_description": "I can write complex SQL queries, filtering data, and performing data manipulation tasks within Power BI Desktop or directly against data sources. I know window functions, groupping",
+        "average_description": "I can design and optimize database schemas, write stored procedures, and fine-tune SQL queries for performance.",
+        "high_description": "I can design and implement complex database systems, perform database administration tasks, and lead database-related projects."
+      },
+      {
+        "name": "Data catalogue knowledge. Orientation in data sources",
+        "description": "I know that Data catalogue exists; I'll ask more senior colleagues what sources to use for performing a task",
+        "medium_description": "I know main data sources for my skill, I understand where to find the necessary information",
+        "average_description": "I understand the main sources in the skills I am involved in; know where to find the necessary information on all data sources",
+        "high_description": "I know all data sources in my focus skill and understand the main data sources in all the skills I work with. I understand where to find the necessary information about data sources"
+      },
+      {
+        "name": "Working with version control systems",
+        "description": "I'm not familiar with that concept",
+        "medium_description": "I Understand the basics of version control, such as creating and cloning a repository, committing changes, and resolving merge conflicts. Requires guidance and review from more senior team members.",
+        "average_description": "I heve experience working with version control systems and can handle complex merging and branching scenarios. Can use tags and releases to manage project versions effectively.",
+        "high_description": "I can design and implement a version control strategy for a project or team. I understand best practices for maintaining a clean commit history, rebasing, and resolving conflicts. Can create and manage repositories, set up permissions and access controls, and implement continuous integration and deployment (CI/CD) pipelines."
+      },
+      {
+        "name": "Python",
+        "description": "I can write basic Python code using standard libraries and follow code style conventions.",
+        "medium_description": "I can write Python code for moderately complex tasks and use third-party libraries for data processing and visualization.",
+        "average_description": "I can write Python code for complex tasks, optimize code for performance, and design and implement software systems in Python.",
+        "high_description": "I can design and implement software systems using advanced Python concepts such as metaprogramming, multithreading, and multiprocessing. I can lead a team of developers working on Python projects and make architectural decisions based on business requirements."
+      }
+    ]
+  },
+  {
+    "category": "ETL tool (SQL server and other)",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": []
+  },
+  {
+    "category": "Soft skills",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": [
+      {
+        "name": "Initiative",
+        "description": "I focus on performing the tasks I have",
+        "medium_description": "I can propose my ideas to my manager, initiate improvements if I see an area for improvement",
+        "average_description": "I analyse value of our service for the business and can initiate improvements",
+        "high_description": "I can initiate inprovements that will affect the business, evaluate the idea and design MVP"
+      },
+      {
+        "name": "Problem solving skills",
+        "description": "I can identify a problem and consider possible solutions",
+        "medium_description": "I can identify the problem and it's root causes. I can propose several solutions and communicate the stakeholders properly",
+        "average_description": "I can analyse the problem from the different angles, identify the rool causes, address the issues with solutions and identify potential risks related to each solution",
+        "high_description": "I can anticipate the problem areas and associated risk levels, diagnose the problem using problem-solving tools and techniques from multiple angles, generate and evaluate several solutions considering the business priorities and stakeholders' needs"
+      },
+      {
+        "name": "Creating and editing text",
+        "description": "I can explain the idea in writing. I pay attention to details so the text could be too verbose",
+        "medium_description": "I can explain the idea briefly and clearly",
+        "average_description": "I think of the target audience when writing a text. I explain the idea so that the reader will understand it with minimum efforts",
+        "high_description": "I know and apply infostyle principles"
+      },
+      {
+        "name": "Documentation",
+        "description": "I can describe how to work with the dashboard",
+        "medium_description": "I can highlight main information and describe the dashboard in clear language",
+        "average_description": "Can create comprehensive documentation, including detailed architecture diagrams, technical specifications, user manuals, and guidelines for maintenance and support, with minimal supervision. I describe all the dashboard UI and methodological features, track all the changes",
+        "high_description": "Can develop and implement a team documentation strategy, collaborate with other departments, and manage a team of technical writers to create and maintain documentation for multiple products or projects."
+      },
+      {
+        "name": "Communication skills",
+        "description": "I often find myself in a situation when I and person I am talking to can't understand each other",
+        "medium_description": "I can communicate with my team. Sometimes I find it difficult to explain the idea to representatives of nother departments",
+        "average_description": "I can effectively solve most part of the tasks in communication with the stakeholders and my team",
+        "high_description": "I can effectively solve any tasks in communication with the stakeholders and my team"
+      },
+      {
+        "name": "English language",
+        "description": "A2 Pre-Intermediate",
+        "medium_description": "B1 Intermediate",
+        "average_description": "B2 Upper Intermediate",
+        "high_description": "C1 Fluent"
+      },
+      {
+        "name": "Proactivility",
+        "description": "I am willing to take on new tasks and responsibilities in BI projects and actively seek guidance from team members.",
+        "medium_description": "I am able to identify areas where proactivity is needed in BI projects and can take initiative to make improvements or suggest new solutions. I am able to work independently and seek input from team members as needed.",
+        "average_description": "I can identify and proactively mitigate project risks and blockers, regularly communicate status updates, and initiate process improvements to increase project efficiency.",
+        "high_description": "I can proactively anticipate project risks and blockers, develop and implement effective mitigation strategies, provide guidance and mentorship to team members, and drive a culture of proactivity and continuous improvement in the BI project space."
+      }
+    ]
+  },
+  {
+    "category": "Volitional powers",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": []
+  },
+  {
+    "category": "Leadership",
+    "description": null,
+    "medium_description": null,
+    "average_description": null,
+    "high_description": null,
+    "subcategories": []
+  }
+]

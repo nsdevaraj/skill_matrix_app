@@ -26,6 +26,49 @@ body {
   background-color: #e0f7fa;
 }
 
+/* Proficiency level styling */
+.low-proficiency {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.medium-proficiency {
+  background-color: #fff8e1;
+  border-left: 4px solid #ffc107;
+}
+
+.average-proficiency {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+}
+
+.high-proficiency {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4caf50;
+}
+
+/* Proficiency level headers */
+h5, h6 {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+h5:contains("Low Proficiency"), h6:contains("Low Proficiency") {
+  color: #d32f2f;
+}
+
+h5:contains("Medium Proficiency"), h6:contains("Medium Proficiency") {
+  color: #ff8f00;
+}
+
+h5:contains("Average Proficiency"), h6:contains("Average Proficiency") {
+  color: #1976d2;
+}
+
+h5:contains("High Proficiency"), h6:contains("High Proficiency") {
+  color: #388e3c;
+}
+
 /* Accordion styling */
 .accordion-button:not(.collapsed) {
   background-color: #f8f9fa;
@@ -146,4 +189,56 @@ body {
 
 .progress-bar {
   font-weight: 500;
+}
+
+/* Proficiency level cards */
+.card .col-md-6 {
+  padding: 0.75rem;
+}
+
+.card .col-md-6:nth-child(1) {
+  background-color: rgba(255, 235, 238, 0.3);
+}
+
+.card .col-md-6:nth-child(2) {
+  background-color: rgba(255, 248, 225, 0.3);
+}
+
+.card .col-md-6:nth-child(3) {
+  background-color: rgba(227, 242, 253, 0.3);
+}
+
+.card .col-md-6:nth-child(4) {
+  background-color: rgba(232, 245, 233, 0.3);
+}
+
+/* Proficiency level tabs */
+.nav-tabs .nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.nav-tabs .nav-link.active {
+  font-weight: 500;
+}
+
+/* Proficiency level badges */
+.badge-low {
+  background-color: #f44336;
+  color: white;
+}
+
+.badge-medium {
+  background-color: #ffc107;
+  color: black;
+}
+
+.badge-average {
+  background-color: #2196f3;
+  color: white;
+}
+
+.badge-high {
+  background-color: #4caf50;
+  color: white;
 }

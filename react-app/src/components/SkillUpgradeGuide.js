@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Table, Form, Button, Nav, Tab, Alert, Modal, ProgressBar, Dropdown, Accordion, Badge } from 'react-bootstrap';
-import criteriaData from '../data/criteria.json';
+import criteriaWithAllLevels from '../data/criteria_with_all_levels.json';
 import teamOverviewData from '../data/team_overview.json';
 
 const SkillUpgradeGuide = () => {
@@ -44,14 +44,14 @@ const SkillUpgradeGuide = () => {
   const [selectedRole, setSelectedRole] = useState('Junior Developer');
   
   useEffect(() => {
-    // Load criteria data
-    setCriteria(criteriaData);
+    // Load criteria data with all proficiency levels
+    setCriteria(criteriaWithAllLevels);
     
     // Load team overview data
     setEmployees(teamOverviewData);
     
     // Initialize fields for drag and drop
-    const categoryFields = criteriaData.map(category => ({
+    const categoryFields = criteriaWithAllLevels.map(category => ({
       id: category.category,
       name: category.category,
       type: 'category'
@@ -67,7 +67,7 @@ const SkillUpgradeGuide = () => {
     
     // Initialize expanded state for all categories
     const initialExpandedState = {};
-    criteriaData.forEach((category, index) => {
+    criteriaWithAllLevels.forEach((category, index) => {
       initialExpandedState[index] = false;
     });
     setExpandedCategories(initialExpandedState);
@@ -188,7 +188,7 @@ const SkillUpgradeGuide = () => {
       <Card className="mb-4">
         <Card.Body>
           <Card.Title>Skill Development Visualization</Card.Title>
-          <p>This interactive guide helps visualize the skill progression path for different roles and skill categories.</p>
+          <p>This interactive guide helps visualize the skill progression path across four proficiency levels: Low, Medium, Average, and High.</p>
           
           <Row className="mt-3">
             <Col md={8}>
@@ -353,11 +353,24 @@ const SkillUpgradeGuide = () => {
                                 <Accordion.Header>{subcategory.name}</Accordion.Header>
                                 <Accordion.Body>
                                   <div className="subcategory-details">
-                                    {subcategory.description ? (
-                                      <p>{subcategory.description}</p>
-                                    ) : (
-                                      <p>No detailed description available for this subcategory.</p>
-                                    )}
+                                    <Row>
+                                      <Col md={6} className="mb-3">
+                                        <h6>Low Proficiency</h6>
+                                        <p>{subcategory.description || 'No description available'}</p>
+                                      </Col>
+                                      <Col md={6} className="mb-3">
+                                        <h6>Medium Proficiency</h6>
+                                        <p>{subcategory.medium_description || 'No description available'}</p>
+                                      </Col>
+                                      <Col md={6}>
+                                        <h6>Average Proficiency</h6>
+                                        <p>{subcategory.average_description || 'No description available'}</p>
+                                      </Col>
+                                      <Col md={6}>
+                                        <h6>High Proficiency</h6>
+                                        <p>{subcategory.high_description || 'No description available'}</p>
+                                      </Col>
+                                    </Row>
                                     
                                     {subcategory.skills && subcategory.skills.length > 0 ? (
                                       <>
@@ -915,9 +928,17 @@ const SkillUpgradeGuide = () => {
               <Card className="mb-3">
                 <Card.Body>
                   <Row>
-                    <Col md={6}>
+                    <Col md={6} className="mb-3">
                       <h5>Low Proficiency</h5>
                       <p>{selectedSkill.description || 'No description available'}</p>
+                    </Col>
+                    <Col md={6} className="mb-3">
+                      <h5>Medium Proficiency</h5>
+                      <p>{selectedSkill.medium_description || 'No description available'}</p>
+                    </Col>
+                    <Col md={6}>
+                      <h5>Average Proficiency</h5>
+                      <p>{selectedSkill.average_description || 'No description available'}</p>
                     </Col>
                     <Col md={6}>
                       <h5>High Proficiency</h5>
@@ -967,11 +988,24 @@ const SkillUpgradeGuide = () => {
                         <Accordion.Header>{subcategory.name}</Accordion.Header>
                         <Accordion.Body>
                           <div className="subcategory-details">
-                            {subcategory.description ? (
-                              <p>{subcategory.description}</p>
-                            ) : (
-                              <p>No detailed description available for this subcategory.</p>
-                            )}
+                            <Row>
+                              <Col md={6} className="mb-3">
+                                <h6>Low Proficiency</h6>
+                                <p>{subcategory.description || 'No description available'}</p>
+                              </Col>
+                              <Col md={6} className="mb-3">
+                                <h6>Medium Proficiency</h6>
+                                <p>{subcategory.medium_description || 'No description available'}</p>
+                              </Col>
+                              <Col md={6}>
+                                <h6>Average Proficiency</h6>
+                                <p>{subcategory.average_description || 'No description available'}</p>
+                              </Col>
+                              <Col md={6}>
+                                <h6>High Proficiency</h6>
+                                <p>{subcategory.high_description || 'No description available'}</p>
+                              </Col>
+                            </Row>
                             
                             {subcategory.skills && subcategory.skills.length > 0 ? (
                               <>

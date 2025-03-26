@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Table, Accordion, Badge, Form, Button, Row, Col, Alert } from 'react-bootstrap';
-import criteriaData from '../data/criteria.json';
+import criteriaWithAllLevels from '../data/criteria_with_all_levels.json';
 
 const Criteria = () => {
   const [criteria, setCriteria] = useState([]);
@@ -9,12 +9,12 @@ const Criteria = () => {
   const [expandedCategories, setExpandedCategories] = useState({});
   
   useEffect(() => {
-    // Load criteria data
-    setCriteria(criteriaData);
+    // Load criteria data with all proficiency levels
+    setCriteria(criteriaWithAllLevels);
     
     // Initialize expanded state for all categories
     const initialExpandedState = {};
-    criteriaData.forEach((category, index) => {
+    criteriaWithAllLevels.forEach((category, index) => {
       initialExpandedState[index] = false;
     });
     setExpandedCategories(initialExpandedState);
@@ -56,7 +56,7 @@ const Criteria = () => {
       <Card className="mb-4">
         <Card.Body>
           <Card.Title>Master Criteria Reference</Card.Title>
-          <p>This page shows the detailed criteria for evaluating skills across different categories.</p>
+          <p>This page shows the detailed criteria for evaluating skills across different categories with four proficiency levels: Low, Medium, Average, and High.</p>
           
           <Form className="mt-3">
             <Form.Group>
@@ -108,9 +108,17 @@ const Criteria = () => {
                 </Card.Header>
                 <Card.Body>
                   <Row>
-                    <Col md={6}>
+                    <Col md={6} className="mb-3">
                       <h5>Low Proficiency</h5>
                       <p>{filteredCriteria[selectedCategory].description || 'No description available'}</p>
+                    </Col>
+                    <Col md={6} className="mb-3">
+                      <h5>Medium Proficiency</h5>
+                      <p>{filteredCriteria[selectedCategory].medium_description || 'No description available'}</p>
+                    </Col>
+                    <Col md={6}>
+                      <h5>Average Proficiency</h5>
+                      <p>{filteredCriteria[selectedCategory].average_description || 'No description available'}</p>
                     </Col>
                     <Col md={6}>
                       <h5>High Proficiency</h5>
@@ -158,11 +166,24 @@ const Criteria = () => {
                           <Accordion.Header>{subcategory.name}</Accordion.Header>
                           <Accordion.Body>
                             <div className="subcategory-details">
-                              {subcategory.description ? (
-                                <p>{subcategory.description}</p>
-                              ) : (
-                                <p>No detailed description available for this subcategory.</p>
-                              )}
+                              <Row>
+                                <Col md={6} className="mb-3">
+                                  <h6>Low Proficiency</h6>
+                                  <p>{subcategory.description || 'No description available'}</p>
+                                </Col>
+                                <Col md={6} className="mb-3">
+                                  <h6>Medium Proficiency</h6>
+                                  <p>{subcategory.medium_description || 'No description available'}</p>
+                                </Col>
+                                <Col md={6}>
+                                  <h6>Average Proficiency</h6>
+                                  <p>{subcategory.average_description || 'No description available'}</p>
+                                </Col>
+                                <Col md={6}>
+                                  <h6>High Proficiency</h6>
+                                  <p>{subcategory.high_description || 'No description available'}</p>
+                                </Col>
+                              </Row>
                               
                               {subcategory.skills && subcategory.skills.length > 0 ? (
                                 <>
@@ -210,16 +231,24 @@ const Criteria = () => {
             <Accordion.Body>
               <Card className="mb-3">
                 <Card.Body>
-                  <div className="d-flex justify-content-between">
-                    <div>
+                  <Row>
+                    <Col md={6} className="mb-3">
                       <h6>Low Proficiency</h6>
                       <p>{category.description || 'No description available'}</p>
-                    </div>
-                    <div>
+                    </Col>
+                    <Col md={6} className="mb-3">
+                      <h6>Medium Proficiency</h6>
+                      <p>{category.medium_description || 'No description available'}</p>
+                    </Col>
+                    <Col md={6}>
+                      <h6>Average Proficiency</h6>
+                      <p>{category.average_description || 'No description available'}</p>
+                    </Col>
+                    <Col md={6}>
                       <h6>High Proficiency</h6>
                       <p>{category.high_description || 'No description available'}</p>
-                    </div>
-                  </div>
+                    </Col>
+                  </Row>
                 </Card.Body>
               </Card>
               
@@ -254,11 +283,24 @@ const Criteria = () => {
                         <Accordion.Header>{subcategory.name}</Accordion.Header>
                         <Accordion.Body>
                           <div className="subcategory-details">
-                            {subcategory.description ? (
-                              <p>{subcategory.description}</p>
-                            ) : (
-                              <p>No detailed description available for this subcategory.</p>
-                            )}
+                            <Row>
+                              <Col md={6} className="mb-3">
+                                <h6>Low Proficiency</h6>
+                                <p>{subcategory.description || 'No description available'}</p>
+                              </Col>
+                              <Col md={6} className="mb-3">
+                                <h6>Medium Proficiency</h6>
+                                <p>{subcategory.medium_description || 'No description available'}</p>
+                              </Col>
+                              <Col md={6}>
+                                <h6>Average Proficiency</h6>
+                                <p>{subcategory.average_description || 'No description available'}</p>
+                              </Col>
+                              <Col md={6}>
+                                <h6>High Proficiency</h6>
+                                <p>{subcategory.high_description || 'No description available'}</p>
+                              </Col>
+                            </Row>
                             
                             {subcategory.skills && subcategory.skills.length > 0 ? (
                               <>
